@@ -1,14 +1,13 @@
-/* إعداد نمط التصميم */
+/* إعداد نمط الصفحة */
 body {
     margin: 0;
     font-family: "Arial", sans-serif;
-    background: url("background.jpg") no-repeat center center fixed; /* صورة الخلفية */
-    background-size: cover; /* جعل الصورة تغطي الموقع بأكمله */
-    color: #ffffff;
+    background-color: #ffffff; /* خلفية بيضاء */
+    color: #001f3f; /* لون أزرق للنص */
 }
 
 .header {
-    background-color: rgba(0, 0, 0, 0.8); /* لون شبه شفاف لتمييز الهيدر مع الخلفية */
+    background-color: #001f3f; /* شريط أزرق غامق */
     padding: 15px 20px;
 }
 
@@ -41,24 +40,28 @@ body {
 
 .main-content {
     text-align: center;
-    margin-top: 100px;
+    height: calc(100vh - 70px); /* يجعل المحتوى يتوسط الصفحة */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
     font-size: 48px;
-    color: #ff4500; /* ألوان العنوان */
+    color: #001f3f; /* لون أزرق للنص العنوان */
+    margin-bottom: 20px;
 }
 
 .description {
     font-size: 18px;
     max-width: 600px;
-    margin: auto;
-    line-height: 1.8;
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .action-button {
-    background-color: #ff4500;
+    background-color: #ff4500; /* لون برتقالي للزر */
     border: none;
     color: #ffffff;
     padding: 15px 30px;
@@ -69,5 +72,5 @@ body {
 }
 
 .action-button:hover {
-    background-color: #e53e00; /* تأثير الزر أثناء التمرير */
+    background-color: #e74400; /* تأثير لون الزر عند التمرير */
 }
