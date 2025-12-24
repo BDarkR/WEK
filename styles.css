@@ -3391,25 +3391,24 @@ header, .navbar {
 
 
 
-/* === FINAL fix: cover any remaining top strip above the footer === */
-footer {
-  position: relative !important;
-  z-index: 10 !important;
-  margin-top: 0 !important; /* prevent gaps creating a line */
-  isolation: isolate; /* create new stacking context for ::before overlay */
-}
-/* Extend a solid flap 6px upward to cover any subpixel seam from the section above */
-footer::before {
-  content: "" !important;
-  position: absolute !important;
-  top: -6px !important; /* extend above footer */
-  left: 0; right: 0;
-  height: 6px !important; /* cover thin strip fully */
-  background: #0f172a !important; /* same as page bg */
+/* === HARD MASK for residual purple at very bottom of the page === */
+html, body { background-color: #0f172a; }
+body::after {
+  /* A fixed mask that sits above everything at the very bottom to unify the color */
+  content: "";
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 10px; /* cover any seam even on zoom */
+  background: #0f172a; /* exact page bg */
   pointer-events: none;
+  z-index: 2147483646; /* just beneath system overlays */
 }
-/* Make sure the section right before footer doesn't draw a 1px border/shadow */
-footer, footer * { border-top: 0 !important; box-shadow: none !important; }
-.section-divider, .info-section, .laws-grid-section, .about-section, .trade-system, .jobs, .locations {
-  border-bottom: 0 !important; box-shadow: none !important; margin-bottom: 0 !important;
+/* Ensure the last section has no margin that could reveal background seams */
+main > section:last-child,
+section:last-of-type,
+footer { margin-top: 0 !important; }
+
+/* If any gradient band touches the footer, force its last 12px to match background */
+.info-section, .laws-grid-section, .about-section, .trade-system, .jobs, .locations {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) calc(100% - 12px), #0f172a 100%) !important;
 }
