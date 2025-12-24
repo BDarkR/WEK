@@ -8,14 +8,14 @@
   
 /* خلفية متدرجة للصفحة */
 body {
-    background: linear-gradient(to bottom, #12002f, #1a003f);
+    background: linear-gradient(to bottom, #0c1b33, #1e3a5f); /* درجات زرقاء داكنة */
     color: white;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #0c0c0c; /* أو استخدم الخلفية الرئيسية مثل: #191622 */
+    background-color: #0f172a; /* أزرق داكن جداً */
     color: white;
     margin: 0;
     padding: 0;
