@@ -1,282 +1,98 @@
-/* ====== استبدال الألوان البنفسجية بألوان زرقاء ====== */
+/* ====== تغيير اللون الرئيسي فقط ====== */
 
-/* الألوان الأساسية الجديدة */
-:root {
-    --primary-blue: #3b82f6; /* أزرق أساسي */
-    --secondary-blue: #1d4ed8; /* أزرق داكن للhover */
-    --light-blue: #60a5fa; /* أزرق فاتح */
-    --dark-blue: #1e40af; /* أزرق داكن جداً */
-    --accent-blue: #2563eb; /* أزرق متوسط */
+/* تغيير اللون الأساسي في جميع الأزرار */
+.btn, .more-btn, .apply-button, .cta-button, .hero-button,
+.panel a, .romat-card .btn, .store-button,
+.about-card a, .card .btn {
+    background: #3b82f6 !important; /* أزرق */
 }
 
-/* شريط التنقل */
+.btn:hover, .more-btn:hover, .apply-button:hover, .cta-button:hover, .hero-button:hover,
+.panel a:hover, .romat-card .btn:hover, .store-button:hover,
+.about-card a:hover, .card .btn:hover {
+    background: #1d4ed8 !important; /* أزرق داكن */
+}
+
+/* تغيير اللون في شريط التنقل */
 .nav-links a.active {
-    color: var(--primary-blue);
-    border-bottom: 2px solid var(--primary-blue);
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
 }
 
 .nav-links a:hover {
-    color: var(--primary-blue);
+    color: #3b82f6;
 }
 
-/* الأزرار العامة */
-.btn, .more-btn, .apply-button, .cta-button, .hero-button {
-    background: var(--primary-blue);
-}
-
-.btn:hover, .more-btn:hover, .btn1:hover, .apply-button:hover, .cta-button:hover, .hero-button:hover {
-    background: var(--secondary-blue);
-}
-
-.cta-button:hover {
-    background: var(--primary-blue);
-}
-
-/* أيقونات نصف دائرة */
+/* تغيير اللون في الأيقونات */
 .icon-wrapper {
-    background: var(--primary-blue);
-}
-
-.icon-wrapper {
-    background: var(--primary-blue);
+    background: #3b82f6;
     box-shadow: 0px 4px 10px rgba(59, 130, 246, 0.5);
 }
 
-/* بطاقات القطاعات */
-.sector-card:hover {
-    box-shadow: 0px 0px 10px var(--primary-blue);
-}
-
-/* أقسام المتجر */
-.store-section {
-    box-shadow: 0px 5px 15px rgba(59, 130, 246, 0.3)
-}
-
-/* بطاقات الوظائف */
-.job-card:hover {
-    box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.3);
-}
-
-.job-card img {
-    border: 3px solid var(--primary-blue);
-}
-
-/* تأثيرات البطاقات */
-.card:hover {
-    box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.3);
-}
-
-/* الأيقونات في البطاقات */
-.card-icon {
-    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
-    box-shadow: 0px 0px 10px rgba(59, 130, 246, 0.4);
-}
-
-.card .btn {
-    background: var(--primary-blue);
-}
-
-.card .btn:hover {
-    background: var(--secondary-blue);
-}
-
-/* زر التقديم */
-.apply-button {
-    background: linear-gradient(45deg, var(--primary-blue), var(--secondary-blue));
-}
-
-.apply-button:hover {
-    background: linear-gradient(45deg, var(--secondary-blue), var(--dark-blue));
-}
-
-/* أيقونات القوائم */
-.panel ul li::before {
-    color: var(--primary-blue);
-}
-
-.panel ol li::before {
-    color: var(--primary-blue);
-}
-
-.panel a {
-    background: var(--primary-blue);
-}
-
-.panel a:hover {
-    background: var(--secondary-blue);
-}
-
-/* تنسيق العناوين */
+/* تغيير اللون في العناوين المميزة */
 .section-title i {
-    color: var(--primary-blue);
+    color: #3b82f6;
 }
 
-/* بطاقات رومات */
-.romat-card {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-}
-
-.romat-card:hover {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
-}
-
-.romat-card img {
-    border: 2px solid var(--primary-blue);
-}
-
-.romat-card .btn {
-    background-color: var(--primary-blue);
-}
-
-.romat-card .btn:hover {
-    background-color: var(--secondary-blue);
-}
-
-/* قوانين */
-.content-box {
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
-}
-
-.content-box h2 {
-    color: #60a5fa; /* أزرق فاتح */
-    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
-}
-
-.banner-header {
-    background: linear-gradient(90deg, var(--primary-blue), var(--light-blue));
-}
-
-/* بطاقات الوظائف */
-.job1-card {
-    box-shadow: 0 0 15px var(--primary-blue);
-}
-
-.job1-card img {
-    border: 2px solid var(--light-blue);
-    box-shadow: 0 0 10px var(--light-blue);
-}
-
-/* الزر الموجود في الهيدر */
-.hero-button {
-    background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
-}
-
-.hero-button:hover {
-    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
-}
-
-/* أزرار المتجر */
-.store-button {
-    background-color: var(--primary-blue);
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
-}
-
-.store-button.secondary {
-    background-color: var(--secondary-blue);
-    box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
-}
-
-/* جدول المخالفات */
-.violation-table thead {
-    background-color: var(--primary-blue);
-}
-
-/* البطاقات القانونية */
-.law-card:hover {
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-}
-
-.law-card h4 {
-    color: var(--primary-blue);
-}
-
-/* تصنيف المخالفات */
-.category-title {
-    color: var(--primary-blue);
-}
-
-.violation-category {
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.05);
-}
-
-/* البطاقات في قسم من نحن */
-.about-card i {
-    background: var(--secondary-blue);
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-}
-
-.about-card a {
-    background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
-}
-
-.about-card a:hover {
-    background: var(--dark-blue);
-}
-
-/* زر التمرير للأعلى */
-#scrollTopBtn {
-    background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
-}
-
-#scrollTopBtn:hover {
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.6);
-}
-
-/* بطاقات القطاعات */
-.sector-section h2 {
-    color: var(--light-blue);
-    border-bottom: 2px solid var(--light-blue);
-}
-
-/* القوائم الخضراء والحمراء */
-.checklist.green li {
-    background: rgba(96, 165, 250, 0.1);
-    border: 1px solid var(--light-blue);
-    color: var(--light-blue);
-}
-
-.checklist.green li:hover {
-    background: rgba(96, 165, 250, 0.2);
-}
-
-/* صور الزي الموحد */
+/* تغيير اللون في الحدود */
+.job-card img,
+.romat-card img,
 .uniform-images img {
-    border: 2px solid var(--light-blue);
+    border-color: #3b82f6;
 }
 
-/* الكواكب في الخلفية */
-.planet {
-    background: radial-gradient(circle at 30% 30%, #00bfff, #121212);
-}
-
-/* الشعارات العائمة */
-.widget-box h3 {
-    color: var(--primary-blue);
-    text-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
-}
-
+/* تغيير الظلال الزرقاء */
+.sector-card:hover,
+.job-card:hover,
+.store-section,
+.card:hover,
+.romat-card,
+.job1-card,
+.law-card:hover,
+.violation-category,
+.about-card:hover,
 .widget-box:hover {
-    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) !important;
 }
 
-.widget-box {
-    border: 1px solid var(--primary-blue);
+/* تغيير ألوان الخلفيات المتدرجة */
+.apply-button,
+.hero-button,
+.banner-header,
+.about-card a,
+.card-icon {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
 }
 
-/* البطاقات في الشبكة */
-.law-group h3 {
-    color: var(--primary-blue);
+.apply-button:hover,
+.hero-button:hover,
+.about-card a:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
 }
 
-/* تحسين التباين */
+/* تغيير ألوان العناوين */
+.content-box h2,
+.sector-section h2,
+.law-group h3,
+.category-title,
+.law-card h4,
+.widget-box h3 {
+    color: #3b82f6 !important;
+}
+
+/* تغيير لون خلفية الجدول */
 .violation-table thead {
-    background-color: var(--primary-blue);
-    color: white; /* تغيير لون النص إلى أبيض لتحسين القراءة */
+    background-color: #3b82f6 !important;
+    color: white;
 }
 
-/* أيقونات ديسكورد */
+/* تغيير الأيقونات */
 .widget-box h3 i {
-    color: var(--primary-blue); /* تغيير لون أيقونة ديسكورد */
+    color: #3b82f6;
+}
+
+/* تغيير لون أيقونات القوائم */
+.panel ul li::before,
+.panel ol li::before {
+    color: #3b82f6;
 }
