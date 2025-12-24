@@ -3326,55 +3326,21 @@ header, .navbar {
 
 
 /* =============================
-   إزالة الدوائر/الهالات فوق البطاقات
-   تمت الإضافة بواسطة M365 Copilot – 2025-12-24
+   جعل بطاقات المحتوى معتمة لمنع ظهور الدوائر من الخلفية
    ============================= */
-
-/* 1) إخفاء العناصر الدائرية الشائعة */
-.icon-wrapper,
-.card-icon,
-.icon-container,
-.floating-logo,
-.planet,
-.blue-star {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* 2) منع أي عناصر شبهية قد ترسم هالة أعلى البطاقات */
-.card::before,
-.card::after,
-.info-card::before,
-.info-card::after,
-.job-card::before,
-.job-card::after,
-.location-card::before,
-.location-card::after,
-.about-card::before,
-.about-card::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* 3) تعطيل أي خلفيات شعاعية/ظلال قد تبدو كدوائر أعلى البطاقات */
 .card,
 .info-card,
 .job-card,
 .location-card,
 .about-card {
-  background-image: none !important;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important; /* احتفاظ بظل متزن بدون توهج أزرق */
+  background-color: #0f1f3f !important; /* خلفية معتمة داكنة */
+  background-image: none !important;     /* إلغاء أي تدرج/صورة قد تصنع هالة */
+  filter: none !important;               /* إلغاء أي مرشحات قد تُظهر توهج */
 }
 
-/* 4) أحياناً تأتي الهالة من عناصر داخلية صغيرة دائرية */
-.card .icon-wrapper,
+/* في حال كانت الدائرة من عناصر داخلية أعلى البطاقة */
 .card .card-icon,
+.card .icon-wrapper,
 .card .icon-container {
-  display: none !important;
-}
-
-/* 5) ضمان عدم ظهور أي صورة زخرفية باهتة أعلى الصندوق */
-.widget-decoration {
   display: none !important;
 }
