@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>مقاطعة ويـــك</title>
 
   <!-- معلومات عامة -->
@@ -16,162 +15,88 @@
   <!-- خطوط وأيقونات -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- فافيكون -->
   <link rel="shortcut icon" href="../img/logo.gif" type="image/gif" />
 
   <!-- ملف التنسيقات العام -->
   <link rel="stylesheet" href="../styles.css" />
 
-  <!-- سكربتات خارجية/داخلية -->
-  <script src="../../kit.fontawesome.com/a076d05399.html" crossorigin="anonymous"></script>
-  <script defer src="../script.js"></script> <!-- ملف الجافا سكريبت لتحريك الخلفية -->
+  <!-- سكربتات خارجية -->
+  <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script defer src="../script.js"></script>
 
-  <!-- تنسيقات خاصة بقسم الفيديو والمتجر (يمكن نقلها لـ styles.css لاحقًا) -->
+  <!-- تنسيقات إضافية لضبط الفيديو فل سكرين ومنع التداخل -->
   <style>
-    :root {
-      --navbar-height: 72px; /* عدّلها لتساوي ارتفاع الهيدر لديك */
-      --hero-min-h: 55vh;
-      --hero-max-h: 78vh;
-      --overlay-bg: rgba(0, 0, 0, 0.35);
-      --brand: #39a0ff;
+    :root{
+      /* إذا كان الهيدر عندك fixed غيّر القيمة لارتفاعه الحقيقي، وإلا خليها 0 */
+      --navbar-height: 0px;
     }
 
-    body {
-      font-family: "Tajawal", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-    }
+    body { font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
 
-    /* شريط التنقل */
-    header {
-      position: sticky; /* إذا الهيدر fixed في styles.css اتركه هناك */
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 16px;
-      backdrop-filter: blur(6px);
-    }
-
-    .navbar .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar .nav-links a {
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    /* خلفية الكواكب/الشعارات */
-    .planet-background {
+    /* خلفية الكواكب أسفل كل شيء */
+    .planet-background{
       position: fixed;
       inset: 0;
-      z-index: -1;
+      z-index: 0;              /* أقل من الفيديو والمتجر */
       overflow: hidden;
+      pointer-events: none;    /* ما تمنع التفاعل */
     }
 
-    /* قسم الفيديو (Hero) */
-    .hero {
-      position: relative;
-      margin-top: var(--navbar-height);
-      display: block;
-    }
+    /* الهيدر فوق الخلفية، لكن لن يغطي الفيديو لو margin-top مضبوط */
+    header{ z-index: 5; position: relative; }
 
-    .hero .hero-inner {
+    /* الهيرو = فيديو فل سكرين */
+    .hero{
       position: relative;
+      margin-top: var(--navbar-height); /* اضبطها إذا الهيدر fixed */
+      min-height: 100svh;   /* فل سكرين آمن على الجوال */
       width: 100%;
-      max-width: 1400px;
-      margin-inline: auto;
-      padding-inline: clamp(10px, 3vw, 24px);
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      min-height: var(--hero-min-h);
-      max-height: var(--hero-max-h);
+      z-index: 2;           /* فوق الخلفية */
       overflow: hidden;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
       background: #000;
     }
-
-    .video-container iframe {
+    .hero .video-container{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+    .hero .video-container iframe{
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       border: 0;
+      /* ملاحظة: object-fit لا يطبق على iframe مباشرة،
+         لكن الإطار متمدد لكامل الحاوية بالفعل */
     }
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 1rem;
-      color: #fff;
-      pointer-events: none; /* حتى لا تمنع النقر */
-      background: linear-gradient(to bottom, var(--overlay-bg), transparent 30%, var(--overlay-bg));
-    }
-
-    .hero-overlay h1 {
-      font-weight: 800;
-      font-size: clamp(1.4rem, 2.5vw + 0.5rem, 2.4rem);
-      margin: 0.3rem 0;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-    }
-
-    .hero-overlay p {
-      font-size: clamp(0.95rem, 1.2vw + 0.3rem, 1.3rem);
-      margin: 0.4rem 0 1rem;
-      opacity: 0.95;
-    }
-
-    .hero-overlay .cta-btn {
-      pointer-events: auto;
-      display: inline-block;
-      padding: 0.75rem 1.25rem;
-      background: var(--brand);
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform 0.15s ease, background 0.2s ease;
-      box-shadow: 0 6px 16px rgba(57, 160, 255, 0.35);
-    }
-    .hero-overlay .cta-btn:hover { transform: translateY(-2px); }
-
-    /* قسم المتجر */
-    .store-section {
+    /* قسم المتجر تحت الفيديو مباشرة */
+    .store-section{
+      position: relative;
+      z-index: 3; /* أعلى من الخلفية */
+      max-width: 1100px;
       margin: clamp(18px, 3vw, 28px) auto 24px;
       padding: clamp(16px, 3.5vw, 32px);
       text-align: center;
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(0,0,0,0.15);
       border-radius: 14px;
       backdrop-filter: blur(6px);
-      max-width: 1100px;
     }
-
-    .store-section h2 {
+    .store-section h2{
       color: #fff;
       margin: 0 0 8px;
       font-weight: 800;
     }
-
-    .store-section p {
+    .store-section p{
       color: #d8e6ff;
       margin-bottom: 16px;
     }
-
-    .store-section .store-button {
+    .store-section .store-button{
       display: inline-block;
       padding: 0.65rem 1.15rem;
       background: #2b7be4;
@@ -180,14 +105,13 @@
       text-decoration: none;
       font-weight: 700;
     }
-
-    .store-section .store-button:hover { background: #246bca; }
+    .store-section .store-button:hover{ background:#246bca; }
 
     /* زر الرجوع للأعلى */
-    #scrollTopBtn {
+    #scrollTopBtn{
       position: fixed;
       bottom: 22px;
-      inset-inline-end: 22px; /* يدعم RTL */
+      inset-inline-end: 22px; /* مناسب للـ RTL */
       display: none;
       align-items: center;
       justify-content: center;
@@ -199,32 +123,30 @@
       border: none;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      z-index: 999;
+      z-index: 9;
     }
 
-    @media (max-width: 600px) {
-      :root {
-        --navbar-height: 64px;
-        --hero-min-h: 40vh;
-        --hero-max-h: 60vh;
-      }
-      .hero-overlay { padding: 0.5rem; }
+    @media (max-width: 600px){
+      /* إن كان عندك هيدر أعلى الجوال، حط قيمته هنا */
+      /* :root{ --navbar-height: 0px; } */
     }
   </style>
 </head>
 
 <body>
-  <!-- خلفية الكواكب والعناصر التحريكية -->
+
+  <!-- خلفية الكواكب -->
   <div class="planet-background">
+    <!-- الكواكب -->
     <div class="planet planet1"></div>
     <div class="planet planet2"></div>
     <div class="planet planet3"></div>
     <div class="planet planet4"></div>
 
-    <!-- شعارات المقاطعة المتحركة -->
-    <img src="../img/logo.gif" class="floating-logo logo1" alt="شعار المقاطعة" />
-    <img src="../img/logo.gif" class="floating-logo logo2" alt="شعار المقاطعة" />
-    <img src="../img/logo.gif" class="floating-logo logo3" alt="شعار المقاطعة" />
+    <!-- شعارات المقاطعة -->
+    <img src="../img/logo.gif" class="floating-logo logo1" alt="شعار المقاطعة">
+    <img src="../img/logo.gif" class="floating-logo logo2" alt="شعار المقاطعة">
+    <img src="../img/logo.gif" class="floating-logo logo3" alt="شعار المقاطعة">
 
     <!-- نجوم زرقاء -->
     <div class="blue-star star1"></div>
@@ -232,6 +154,7 @@
     <div class="blue-star star3"></div>
     <div class="blue-star star4"></div>
     <div class="blue-star star5"></div>
+
     <canvas id="particles-bg"></canvas>
   </div>
 
@@ -239,13 +162,11 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <a href="../index-2.html">
-          <img src="../img/logo.gif" alt="شعار الموقع" />
-        </a>
+        <a href="../index-2.html"><img src="../img/logo.gif" alt="شعار الموقع"></a>
       </div>
       <ul class="nav-links">
         <li><a href="../index.html">الرئيسية</a></li>
-        <li><a class="activeKK" href="store.html">المتجر</a></li>
+        <li><a href="store.html" class="activeKK">المتجر</a></li>
         <li><a href="../guide/guide.html">دليل المقاطعة</a></li>
         <li><a href="../rules/rules.html">القوانين</a></li>
         <li><a href="../jobs/jobs.html">تقديم الوظائف</a></li>
@@ -254,24 +175,23 @@
     </nav>
   </header>
 
-  <!-- قسم الفيديو (Hero) -->
+  <!-- الفيديو فل سكرين -->
   <section class="hero" aria-label="فيديو تعريفي">
-    <div class="hero-inner">
-      <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/Gk9spYNF5uQ?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=Gk9spYNF5uQ"
-          title="فيديو تعريفي"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/Gk9spYNF5uQ?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=Gk9spYNF5uQ&playsinline=1"
+        title="WEK County Intro"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
 
-
+  <!-- قسم المتجر -->
   <section id="store" class="store-section reveal" aria-label="المتجر">
     <h2><i class="fas fa-globe-americas"></i> متجر دول العالم</h2>
     <p>منتجات متاحة للاعبين من جميع أنحاء العالم.</p>
-    <a class="store-button" href="https://boleto-county.tebex.io/" target="_blank" rel="noopener">تصفح المنتجات</a>
+    <a href="https://boleto-county.tebex.io/" class="store-button">تصفح المنتجات</a>
   </section>
 
   <!-- زر العودة للأعلى -->
@@ -279,7 +199,7 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- سكربت بسيط للزر -->
+  <!-- سكربت بسيط لزر العودة للأعلى -->
   <script>
     // إظهار الزر عند التمرير
     window.addEventListener("scroll", function () {
@@ -297,5 +217,6 @@
   <footer>
     <p>&copy; 2025 جميع الحقوق محفوظة | مقاطعة ويـــك</p>
   </footer>
+
 </body>
 </html>
