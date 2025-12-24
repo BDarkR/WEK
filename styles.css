@@ -3326,16 +3326,33 @@ header, .navbar {
 
 
 /* =====================================================
-   Scoped fix: إزالة الشكل البيضاوي فقط من بطاقات الأقسام
-   بدون التأثير على بقية العناصر/الخلفيات
+   Ultra-scoped fix: إزالة أي دائرة/بيضوي/هالة فوق بطاقات الأقسام فقط
+   يستهدف جميع أنواع البطاقات المعروفة في الملف، دون المساس بالخلفيات العامة
    تاريخ: 2025-12-24
    ===================================================== */
 
-/* إلغاء أي عناصر شبهية تُنشئ شكل بيضاوي فوق البطاقات */
-.card::before,
-.card::after,
-.info-card::before,
-.info-card::after {
+/* 0) قائمة البطاقات التي قد تُستخدم في الصفحة */
+/* إذا لديك أسماء أخرى أضفها هنا */
+.card,
+.info-card,
+.job-card,
+.location-card,
+.romat-card,
+.job1-card,
+.large-card,
+.about-card {
+  position: relative !important;
+}
+
+/* 1) إزالة أي عناصر شبهية (قبل/بعد) قد ترسم دائرة/بيضوي/هالة */
+.card::before, .card::after,
+.info-card::before, .info-card::after,
+.job-card::before, .job-card::after,
+.location-card::before, .location-card::after,
+.romat-card::before, .romat-card::after,
+.job1-card::before, .job1-card::after,
+.large-card::before, .large-card::after,
+.about-card::before, .about-card::after {
   content: none !important;
   display: none !important;
   background: none !important;
@@ -3344,9 +3361,27 @@ header, .navbar {
   border: none !important;
 }
 
-/* ضمان أن البطاقات نفسها لا تحمل أي خلفية شعاعية/فلتر يسبب بيضوي في الأعلى */
-.card,
-.info-card {
+/* 2) تعطيل أي عناصر داخلية دائرية تسبب هالة أعلى البطاقة */
+.card .icon-wrapper,
+.card .card-icon,
+.card .icon-container,
+.info-card .icon-wrapper,
+.info-card .card-icon,
+.info-card .icon-container {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* 3) إزالة أي تدرجات/مرشحات قد تظهر كبيضوي على خلفية البطاقة */
+.card, .info-card, .job-card, .location-card, .romat-card, .job1-card, .large-card, .about-card {
   background-image: none !important;
   filter: none !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important; /* ظل ناعم بلا توهج أزرق */
+}
+
+/* 4) تأكيد عدم وجود حافة عليا مائلة أو تأثيرات موجية فوق البطاقات */
+.section-divider,
+.banner-header {
+  display: none !important; /* إن كانت تظهر فوق البطاقات في هذه الصفحة تحديداً */
 }
