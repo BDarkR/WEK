@@ -3366,32 +3366,77 @@ header, .navbar {
   display: none !important;
 }
 
-/* شعار PNG داخل دائرة أعلى البطاقة */
+
+/* =========================================
+   شعار PNG داخل دائرة أعلى البطاقة (نهائي)
+   ========================================= */
+
+/* تأكد أن البطاقات مرجع تموضع */
 .card,
 .info-card,
 .job-card,
-.location-card {
-  position: relative;
+.location-card,
+.about-card {
+  position: relative !important;
+  overflow: visible !important;
 }
 
+/* غطاء علوي خفيف يدفن أي هالة قديمة */
+.card::before,
+.info-card::before,
+.job-card::before,
+.location-card::before,
+.about-card::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -26px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 76px !important;
+  height: 76px !important;
+  border-radius: 50% !important;
+  background: #0f1f3f !important;          /* لون قريب من لون البطاقة */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35) !important;
+  z-index: 2 !important;
+}
+
+/* دائرة الشعار نفسها */
 .card::after,
 .info-card::after,
 .job-card::after,
-.location-card::after {
-  content: "";
-  position: absolute;
-  top: -28px; /* يرفع الدائرة فوق البطاقة */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #0b1f3a; /* خلفية داخل الدائرة */
-  background-image: url("img/logo.png"); /* ← غيّر المسار إذا لزم */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70% 70%; /* حجم الشعار داخل الدائرة */
-  border: 2px solid #2563eb;
-  box-shadow: 0 0 12px rgba(37, 99, 235, 0.35);
-  z-index: 3;
+.location-card::after,
+.about-card::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -14px !important;                    /* ارفع/نزّل حسب رغبتك */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  background-color: #0b1f3a !important;     /* خلفية داخل الدائرة */
+  background-image: url("img/logo.png") !important; /* ✅ المسار صحيح */
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 60% 60% !important;      /* حجم الشعار داخل الدائرة */
+  border: 2px solid #2563eb !important;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.35) !important;
+  z-index: 3 !important;
 }
+
+/* كتم أي عناصر دائرية قديمة داخل البطاقات */
+.card .icon-wrapper,
+.card .card-icon,
+.card .icon-container {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* لو تريد تعطيل الشعار عن بطاقة معيّنة */
+.no-top-logo::before,
+.no-top-logo::after {
+  content: none !important;
+  display: none !important;
+}
+
