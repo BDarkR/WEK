@@ -8,7 +8,7 @@
   
 /* خلفية متدرجة للصفحة */
 body {
-    background: linear-gradient(to bottom, #12002f, #1a003f);
+    background: linear-gradient(to bottom, #004a8f, #0300a7);
     color: white;
     margin: 0;
     padding: 0;
@@ -77,17 +77,17 @@ nav {
 }
 
 .nav-links a.active {
-    color: #a855f7;
-    border-bottom: 2px solid #a855f7;
+    color: #557bf7;
+    border-bottom: 2px solid #5588f7;
     padding-bottom: 3px;
 }
 .nav-links a.activeKK{
-    color: #fdc200;
+    color: #fd0000;
     padding-bottom: 3px;
 }
 
 .nav-links a:hover {
-    color: #a855f7;
+    color: #559bf7;
 }
 
 /* ====== القسم الرئيسي مع الفيديو ====== */
@@ -122,7 +122,7 @@ nav {
 
 .btn, .more-btn, .apply-button, .cta-button {
     display: inline-block;
-    background: #a855f7;
+    background: #556df7;
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -134,7 +134,7 @@ nav {
 }
 
 .btn:hover, .more-btn:hover, .btn1:hover, .apply-button:hover, .cta-button:hover {
-    background: #9333ea;
+    background: #556df7;
     transform: scale(1.05);
 }
 
@@ -145,7 +145,7 @@ nav {
     display: inline-block;
     padding: 12px 24px;
     color: white;
-    background: #a855f7;
+    background: #556df7;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
@@ -154,7 +154,7 @@ nav {
 }
 
 .cta-button:hover {
-    background: #9333ea;
+    background: #3345ea;
     transform: scale(1.05);
 }
 
@@ -283,7 +283,7 @@ html {
 .icon-wrapper {
     width: 120px;
     height: 60px;
-    background: #a855f7;
+    background: #556df7;
     border-radius: 60px 60px 0 0;
     display: flex;
     align-items: center;
@@ -303,7 +303,7 @@ html {
 .icon-wrapper {
     width: 120px;
     height: 60px;
-    background: #a855f7; /* لون الخلفية */
+    background: #556df7; /* لون الخلفية */
     border-radius: 60px 60px 0 0; /* نصف دائرة */
     display: flex;
     align-items: center;
@@ -315,7 +315,7 @@ html {
 .icon-wrapper {
     width: 60px;
     height: 60px;
-    background: #a855f7;
+    background: #556df7;
     border-radius: 50%; /* يجعلها دائرة كاملة */
     display: flex;
     align-items: center;
@@ -362,7 +362,7 @@ html {
 
 .sector-card:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 10px #a855f7;
+    box-shadow: 0px 0px 10px #556df7;
 }
 
 .sector-card img {
@@ -417,7 +417,7 @@ html {
 
 .store-section h2 {
     font-size: 28px;
-    color: #a855f7;
+    color: #556df7;
 }
 
 .store-section p {
@@ -448,7 +448,7 @@ footer {
 
 /* ====== زر معرفة المزيد ====== */
 .more-btn {
-    background: #a855f7;
+    background: #556df7;
     color: white;
     padding: 12px;
     border-radius: 8px;
@@ -457,7 +457,7 @@ footer {
 }
 
 .more-btn:hover {
-    background: #9333ea;
+    background: #3345ea;
     transform: scale(1.05);
 }
 
@@ -524,7 +524,7 @@ footer {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 15px;
-    border: 3px solid #a855f7;
+    border: 3px solid #556df7;
 }
 
 /* عنوان القطاع */
@@ -545,7 +545,7 @@ footer {
 
 /* زر معرفة المزيد */
 .more-btn {
-    background: #a855f7;
+    background: #556df7;
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -559,7 +559,7 @@ footer {
 }
 
 .more-btn:hover {
-    background: #9333ea;
+    background: #3345ea;
     transform: scale(1.05);
 }
 
@@ -605,7 +605,7 @@ footer {
 
 .job-card h2 {
     font-size: 20px;
-    color: #a855f7;
+    color: #556df7;
 }
 
 .job-card p {
@@ -763,7 +763,7 @@ img {
 
 .panel ul li::before {
     content: "•"; /* نقطة جميلة */
-    color: #a855f7;
+    color: #556df7;
     font-size: 20px;
     margin-right: 10px;
 }
@@ -785,7 +785,7 @@ img {
     counter-increment: list-counter; /* إضافة الترقيم */
     content: counter(list-counter) ".";
     font-weight: bold;
-    color: #a855f7;
+    color: #556df7;
     margin-right: 10px;
     font-size: 20px;
 }
@@ -796,7 +796,7 @@ img {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background: #a855f7;
+    background: #556df7;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -805,7 +805,7 @@ img {
 }
 
 .panel a:hover {
-    background: #9333ea;
+    background: #3345ea;
     transform: scale(1.05);
 }
 /* تصميم بنر الفيديو */
@@ -1065,7 +1065,7 @@ img {
 .card-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #a855f7, #6a0dad);
+    background: linear-gradient(135deg, #556df7, #6a0dad);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1100,7 +1100,7 @@ img {
     display: inline-block;
     padding: 12px 20px;
     color: white;
-    background: #a855f7;
+    background: #556df7;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
@@ -1110,7 +1110,7 @@ img {
 }
 
 .card .btn:hover {
-    background: #9333ea;
+    background: #3345ea;
     transform: scale(1.05);
 }
 
@@ -1320,7 +1320,7 @@ img {
 }
 
 .apply-button {
-    background: #a855f7;
+    background: #556df7;
     color: white;
     padding: 15px 30px;
     font-size: 20px;
@@ -1330,7 +1330,7 @@ img {
 }
 
 .apply-button:hover {
-    background: #9333ea;
+    background: #3345ea;
 }
 /* تحسين عرض النصوص والعناوين */
 .sector-info {
@@ -1393,7 +1393,7 @@ img {
 }
 
 .apply-button {
-    background: linear-gradient(45deg, #a855f7, #7e22ce);
+    background: linear-gradient(45deg, #556df7, #7e22ce);
     color: white;
     padding: 15px 35px;
     font-size: 20px;
@@ -1414,7 +1414,7 @@ img {
 .icon-container {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #a855f7, #9333ea);
+    background: linear-gradient(135deg, #556df7, #3345ea);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1425,7 +1425,7 @@ img {
 
 /* تحسين الأزرار */
 .cta-button {
-    background: #9333ea;
+    background: #3345ea;
     padding: 12px 20px;
     color: white;
     border-radius: 8px;
@@ -1435,7 +1435,7 @@ img {
 }
 
 .cta-button:hover {
-    background: #a855f7;
+    background: #556df7;
     transform: scale(1.1);
 }
 
@@ -2707,7 +2707,7 @@ footer {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #9333ea, #a855f7);
+    background: linear-gradient(135deg, #3345ea, #556df7);
     color: white;
     border: none;
     border-radius: 50%;
@@ -2757,7 +2757,7 @@ footer {
     width: 100%;
     transition: transform 0.3s ease;
     position: relative;
-    border: 1px solid #a855f7;
+    border: 1px solid #556df7;
 }
 
 .widget-box:hover {
@@ -2803,7 +2803,7 @@ footer {
     color: #ffcc00;
     margin-bottom: 15px;
     font-weight: bold;
-    text-shadow: 0 0 8px #a855f7;
+    text-shadow: 0 0 8px #556df7;
 }
 
 .about-section p {
@@ -2840,7 +2840,7 @@ footer {
 }
 
 .about-card i {
-    background: #9333ea;
+    background: #3345ea;
     color: white;
     padding: 18px;
     font-size: 32px;
@@ -2865,7 +2865,7 @@ footer {
 .about-card a {
     display: inline-block;
     padding: 12px 20px;
-    background: linear-gradient(to right, #a855f7, #9333ea);
+    background: linear-gradient(to right, #556df7, #3345ea);
     color: white;
     font-weight: bold;
     font-size: 16px;
@@ -2884,7 +2884,7 @@ footer {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(135deg, #9333ea, #a855f7);
+    background: linear-gradient(135deg, #3345ea, #556df7);
     border: none;
     border-radius: 50px;
     box-shadow: 0 0 15px rgba(168, 85, 247, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.05);
@@ -2896,7 +2896,7 @@ footer {
 }
 .hero-button:hover {
     transform: scale(1.07);
-    background: linear-gradient(135deg, #a855f7, #9333ea);
+    background: linear-gradient(135deg, #556df7, #3345ea);
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.8), inset 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
