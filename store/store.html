@@ -3,113 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مقاطعة ويـــك</title>
+    <title>مقاطعة ويـــك | Boleto County</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="../../kit.fontawesome.com/a076d05399.html" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../img/logo.gif" type="image/gif">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script defer src="../script.js"></script> <!-- ملف الجافا سكريبت لتحريك الخلفية -->
-
+    <script defer src="../script.js"></script>
+    
     <!-- معلومات عامة -->
-<meta name="title" content="مقاطعة ويـــك | Boleto County">
-<meta name="description" content="انضم إلى مجتمع ويـــك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
+    <meta name="title" content="مقاطعة ويـــك | WEK County">
+    <meta name="description" content="انضم إلى مجتمع ويـــك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
 
-<!-- Facebook / Discord / Messenger -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://boleto.gg/">
-<meta property="og:title" content="مقاطعة ويـــك | WEK County">
-<meta property="og:description" content="انضم إلى مجتمع ويـــك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
-<meta property="og:image" content="https://boleto.gg/img/logo.png">
+    <meta property="og:title" content="مقاطعة ويـــك | WEK County">
+    <meta property="og:description" content="انضم إلى مجتمع ويـــك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
 </head>
 
-
 <body>
-
+    <!-- الخلفية والشعارات -->
     <div class="planet-background">
-        <!-- الكواكب -->
         <div class="planet planet1"></div>
         <div class="planet planet2"></div>
         <div class="planet planet3"></div>
         <div class="planet planet4"></div>
-      
-        <!-- شعارات المقاطعة -->
         <img src="../img/logo.gif" class="floating-logo logo1" alt="شعار المقاطعة">
         <img src="../img/logo.gif" class="floating-logo logo2" alt="شعار المقاطعة">
         <img src="../img/logo.gif" class="floating-logo logo3" alt="شعار المقاطعة">
+        <div class="blue-star star1"></div>
+        <div class="blue-star star2"></div>
+        <div class="blue-star star3"></div>
+        <div class="blue-star star4"></div>
+        <div class="blue-star star5"></div>
+        <canvas id="particles-bg"></canvas>
+    </div>
 
-        <!-- نجوم زرقاء -->
-   <div class="blue-star star1"></div>
-   <div class="blue-star star2"></div>
-   <div class="blue-star star3"></div>
-   <div class="blue-star star4"></div>
-   <div class="blue-star star5"></div>
-   <canvas id="particles-bg"></canvas>
-      </div>
-
-<!-- شريط التنقل الجديد -->
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="../index-2.html"><img src="../img/logo.gif" alt="شعار الموقع"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../index.html">الرئيسية</a></li>
-            <li><a href="store.html"class="activeKK">المتجر</a></li>
-            <li><a href="../guide/guide.html">دليل المقاطعة</a></li>
-            <li><a href="../rules/rules.html">القوانين</a></li>
-            <li><a href="../jobs/jobs.html">تقديم الوظائف</a></li>
-        </ul>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    </nav>
-</header>
+    <!-- شريط التنقل -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index-2.html"><img src="../img/logo.gif" alt="شعار الموقع"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="store.html" class="activeKK">المتجر</a></li>
+                <li><a href="../guide/guide.html">دليل المقاطعة</a></li>
+                <li><a href="../rules/rules.html">القوانين</a></li>
+                <li><a href="../jobs/jobs.html">تقديم الوظائف</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
     
-<section class="hero">
+    <!-- مقدمة البطل -->
+    <section class="hero">
         <div class="video-container">
-          <iframe
-          src="https://www.youtube.com/embed/Gk9spYNF5uQ?autoplay=1&amp;mute=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playlist=Gk9spYNF5uQ"
-  allow="autoplay"
-  allowfullscreen
-></iframe>
-    <!-- صورة غلاف المتجر -->
-    <section class="store-banner">
-        <h1>مرحبًا بك في متجر مقاطعة ويـــك</h1>
-        <p>استعرض المنتجات المتاحة لكل منطقة واشترِ بكل سهولة!</p>
-    </section>
+            <iframe
+                src="https://www.youtube.com/embed/Gk9spYNF5uQ?autoplay=1&amp;mute=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playlist=Gk9spYNF5uQ"
+                allow="autoplay"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <section class="store-banner">
+            <h1>مرحبًا بك في متجر مقاطعة ويـــك</h1>
+            <p>استعرض المنتجات المتاحة لكل منطقة واشترِ بكل سهولة!</p>
+        </section>
 
-        <!-- متجر دول العالم -->
+        <!-- المتجر -->
         <div class="store-section reveal">
             <h2><i class="fas fa-globe-americas"></i> متجر دول العالم</h2>
-            <p>منتجات متاحة للاعبين من جميع أنحاء العالم  .</p>
+            <p>منتجات متاحة للاعبين من جميع أنحاء العالم.</p>
             <a href="https://boleto-county.tebex.io/" class="store-button">تصفح المنتجات</a>
         </div>
     </section>
-      
     
-
-    <!-- الفوتر -->
-
+    <!-- زر العودة للأعلى -->
     <button id="scrollTopBtn" title="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
-      </button>
+    </button>
 
-      <script>
+    <!-- سكربت JS -->
+    <script>
+        window.onscroll = function () {
+            const btn = document.getElementById("scrollTopBtn");
+            btn.style.display = window.scrollY > 300 ? "flex" : "none";
+        };
 
-        // إظهار الزر عند التمرير
-window.onscroll = function () {
-  const btn = document.getElementById("scrollTopBtn");
-  btn.style.display = window.scrollY > 300 ? "flex" : "none";
-};
+        document.getElementById("scrollTopBtn").onclick = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
 
-// الرجوع للأعلى بسلاسة
-document.getElementById("scrollTopBtn").onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-      </script>
-          <footer>
-            <p>&copy; 2025 جميع الحقوق محفوظة | مقاطعة ويـــك</p>
-        </footer>
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة | مقاطعة ويـــك</p>
+    </footer>
 </body>
-
 </html>
