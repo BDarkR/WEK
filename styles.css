@@ -353,7 +353,7 @@ html {
 }
 
 .sector-card {
-    background: #1a0737;
+    background: #0f1f3f;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
@@ -487,7 +487,7 @@ footer {
 
 /* ====== تصميم القوائم (البطاقات) ====== */
 .job-card {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(59, 130, 246, 0.12);
     padding: 50px;
     border-radius: 15px;
     text-align: center;
@@ -968,7 +968,7 @@ img {
 
 .requirement-item {
     width: 80%;
-    background: linear-gradient(135deg, #3a1c71, #d76d77);
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     padding: 15px;
     text-align: center;
     border-radius: 12px;
