@@ -1,207 +1,105 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مقاطعة ويــك — المتجر</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقاطعة ويـــك</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../../kit.fontawesome.com/a076d05399.html" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../img/logo.gif" type="image/gif">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="../script.js"></script> <!-- ملف الجافا سكريبت لتحريك الخلفية -->
 
-  <!-- ملفات وأصول مشتركة -->
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="icon" type="image/png" href="../img/logo.png">
-  <script src="../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- معلومات عامة -->
+<meta name="title" content="مقاطعة ويـــك | WEK County">
+<meta name="description" content="انضم إلى مجتمع ويـــك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
 
-  <!-- معلومات عامة -->
-  <meta name="title" content="مقاطعة ويك | متجر WEK County">
-  <meta name="description" content="تصفح منتجات مقاطعة ويك وادعم السيرفر. متاح للاعبين من جميع أنحاء العالم.">
-  <meta property="og:title" content="مقاطعة ويك | متجر WEK County">
-  <meta property="og:description" content="تصفح منتجات مقاطعة ويك وادعم السيرفر. متاح للاعبين من جميع أنحاء العالم.">
 
-  <!-- تنسيقات إضافية لضبط الفيديو فل سكرين والمتجر -->
-  <style>
-    :root {
-      /* إذا كان الهيدر fixed غيّر القيمة لارتفاعه الحقيقي (مثلاً 72px). إن لم يكن fixed اتركها 0 */
-      --navbar-height: 0px;
-    }
-
-    body { font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
-
-    /* خلفية الكواكب أسفل المحتوى */
-    .planet-background {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    header { position: relative; z-index: 5; }
-
-    /* الفيديو فل سكرين */
-    .hero {
-      position: relative;
-      margin-top: var(--navbar-height);
-      min-height: 100svh; /* فل سكرين آمن على الجوال */
-      width: 100%;
-      z-index: 2;
-      overflow: hidden;
-      background: #000;
-    }
-    .video-container {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      overflow: hidden;
-    }
-    .video-container iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* قسم المتجر */
-    .store-section {
-      position: relative;
-      z-index: 3; /* فوق الخلفية */
-      max-width: 1100px;
-      margin: clamp(18px, 3vw, 28px) auto 24px;
-      padding: clamp(16px, 3.5vw, 32px);
-      text-align: center;
-      background: rgba(0,0,0,0.15);
-      border-radius: 14px;
-      backdrop-filter: blur(6px);
-    }
-    .store-section h2 {
-      color: #fff;
-      margin: 0 0 8px;
-      font-weight: 800;
-    }
-    .store-section p {
-      color: #d8e6ff;
-      margin-bottom: 16px;
-      line-height: 1.8;
-    }
-    .store-button {
-      display: inline-block;
-      padding: 0.7rem 1.25rem;
-      background: #2b7be4;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    .store-button:hover { background: #246bca; }
-
-    /* زر الرجوع للأعلى */
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 22px;
-      inset-inline-end: 22px; /* مناسب للـ RTL */
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #2b7be4;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      z-index: 9;
-    }
-  </style>
+<meta property="og:title" content="مقاطعة ويـــك | WEK County">
+<meta property="og:description" content="انضم إلى مجتمع ويـــك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
 </head>
+
 
 <body>
 
-  <!-- خلفية الكواكب -->
-  <div class="planet-background">
-    <!-- الكواكب -->
-    <div class="planet planet1"></div>
-    <div class="planet planet2"></div>
-    <div class="planet planet3"></div>
-    <div class="planet planet4"></div>
+    <div class="planet-background">
+        <!-- الكواكب -->
+        <div class="planet planet1"></div>
+        <div class="planet planet2"></div>
+        <div class="planet planet3"></div>
+        <div class="planet planet4"></div>
+      
+        <!-- شعارات المقاطعة -->
+        <img src="../img/logo.gif" class="floating-logo logo1" alt="شعار المقاطعة">
+        <img src="../img/logo.gif" class="floating-logo logo2" alt="شعار المقاطعة">
+        <img src="../img/logo.gif" class="floating-logo logo3" alt="شعار المقاطعة">
 
-    <!-- شعارات المقاطعة -->
-    <img src="../img/logo.gif" class="floating-logo logo1" alt="شعار المقاطعة">
-    <img src="../img/logo.gif" class="floating-logo logo2" alt="شعار المقاطعة">
-    <img src="../img/logo.gif" class="floating-logo logo3" alt="شعار المقاطعة">
-
-    <!-- نجوم -->
-    <div class="blue-star star1"></div>
-    <div class="blue-star star2"></div>
-    <div class="blue-star star3"></div>
-    <div class="blue-star star4"></div>
-    <div class="blue-star star5"></div>
-
-    <canvas id="particles-bg"></canvas>
-  </div>
-
-  <!-- شريط التنقل -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="../index-2.html"><img src="../img/logo.gif" alt="شعار الموقع"></a>
+        <!-- نجوم زرقاء -->
+   <div class="blue-star star1"></div>
+   <div class="blue-star star2"></div>
+   <div class="blue-star star3"></div>
+   <div class="blue-star star4"></div>
+   <div class="blue-star star5"></div>
+   <canvas id="particles-bg"></canvas>
       </div>
-      <ul class="nav-links">
-        <li><a href="../index.html">الرئيسية</a></li>
-        <li><a href="store.html" class="activeKK">المتجر</a></li>
-        <li><a href="../guide/guide.html">دليل المقاطعة</a></li>
-        <li><a href="../rules/rules.html">القوانين</a></li>
-        <li><a href="../jobs/jobs.html">تقديم الوظائف</a></li>
-      </ul>
-      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
+<!-- شريط التنقل الجديد -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index-2.html"><img src="../img/logo.gif" alt="شعار الموقع"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="store.html"class="activeKK">المتجر</a></li>
+            <li><a href="../guide/guide.html">دليل المقاطعة</a></li>
+            <li><a href="../rules/rules.html">القوانين</a></li>
+            <li><a href="../jobs/jobs.html">تقديم الوظائف</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     </nav>
-  </header>
+</header>
 
-  <!-- الفيديو فل سكرين -->
-  <section class="hero" aria-label="فيديو المتجر">
-    <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/Gk9spYNF5uQ?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=Gk9spYNF5uQ&playsinline=1"
-        allow="autoplay"
-        allowfullscreen
-        title="عرض فيديو المتجر">
-      </iframe>
-    </div>
-  </section>
+    <!-- صورة غلاف المتجر -->
+    <section class="store-banner">
+        <h1>مرحبًا بك في متجر مقاطعة ويـــك</h1>
+        <p>استعرض المنتجات المتاحة لكل منطقة واشترِ بكل سهولة!</p>
+    </section>
 
-  <!-- قسم المتجر تحت الفيديو مباشرة -->
-  <section id="store" class="store-section reveal" aria-label="المتجر">
-    <h2><i class="fas fa-globe-americas"></i> متجر دول العالم</h2>
-    <p>منتجات متاحة للاعبين من جميع أنحاء العالم — اشترِ بكل سهولة وادعم السيرفر.</p>
-    <a href="https://boleto-county.tebex.io/" class="store-button" target="_blank" rel="noopener">تصفح المنتجات</a>
-  </section>
+        <!-- متجر دول العالم -->
+        <div class="store-section reveal">
+            <h2><i class="fas fa-globe-americas"></i> متجر دول العالم</h2>
+            <p>منتجات متاحة للاعبين من جميع أنحاء العالم  .</p>
+            <a href="https://boleto-county.tebex.io/" class="store-button">تصفح المنتجات</a>
+        </div>
+    </section>
+      
+    
 
-  <!-- زر العودة للأعلى -->
-  <button id="scrollTopBtn" title="العودة للأعلى" aria-label="العودة للأعلى">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+    <!-- الفوتر -->
 
-  <!-- سكربتات -->
-  <script src="../script.js"></script>
-  <script>
-    // إظهار زر الرجوع للأعلى
-    window.addEventListener("scroll", function () {
-      const btn = document.getElementById("scrollTopBtn");
-      btn.style.display = window.scrollY > 300 ? "flex" : "none";
-    });
-    // الرجوع للأعلى
-    document.getElementById("scrollTopBtn").addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+    <button id="scrollTopBtn" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+      </button>
 
-  <!-- الفوتر -->
-  <footer>
-    <p>&copy; 2025 جميع الحقوق محفوظة | مقاطعة ويــك</p>
-  </footer>
+      <script>
+
+        // إظهار الزر عند التمرير
+window.onscroll = function () {
+  const btn = document.getElementById("scrollTopBtn");
+  btn.style.display = window.scrollY > 300 ? "flex" : "none";
+};
+
+// الرجوع للأعلى بسلاسة
+document.getElementById("scrollTopBtn").onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+      </script>
+          <footer>
+            <p>&copy; 2025 جميع الحقوق محفوظة | مقاطعة ويـــك</p>
+        </footer>
 </body>
+
 </html>
