@@ -3326,62 +3326,43 @@ header, .navbar {
 
 
 /* =====================================================
-   Ultra-scoped fix: إزالة أي دائرة/بيضوي/هالة فوق بطاقات الأقسام فقط
-   يستهدف جميع أنواع البطاقات المعروفة في الملف، دون المساس بالخلفيات العامة
+   KILL-RING PATCH: إزالة أي دائرة/شعار/بيضوي فوق البطاقات نهائياً
+   يستهدف عناصر: ::before/::after + صور top-logo + شعارات عائمة
    تاريخ: 2025-12-24
    ===================================================== */
 
-/* 0) قائمة البطاقات التي قد تُستخدم في الصفحة */
-/* إذا لديك أسماء أخرى أضفها هنا */
-.card,
-.info-card,
-.job-card,
-.location-card,
-.romat-card,
-.job1-card,
-.large-card,
-.about-card {
-  position: relative !important;
-}
-
-/* 1) إزالة أي عناصر شبهية (قبل/بعد) قد ترسم دائرة/بيضوي/هالة */
+/* إلغاء جميع العناصر الشبهية أعلى البطاقات */
 .card::before, .card::after,
 .info-card::before, .info-card::after,
 .job-card::before, .job-card::after,
 .location-card::before, .location-card::after,
-.romat-card::before, .romat-card::after,
-.job1-card::before, .job1-card::after,
 .large-card::before, .large-card::after,
 .about-card::before, .about-card::after {
   content: none !important;
   display: none !important;
-  background: none !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  border: none !important;
 }
 
-/* 2) تعطيل أي عناصر داخلية دائرية تسبب هالة أعلى البطاقة */
-.card .icon-wrapper,
-.card .card-icon,
-.card .icon-container,
-.info-card .icon-wrapper,
-.info-card .card-icon,
-.info-card .icon-container {
+/* إخفاء أي صورة شعار موضوعة فوق البطاقات */
+.top-logo,
+.cards-container .top-logo,
+.info-section .top-logo,
+.card .top-logo {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
-/* 3) إزالة أي تدرجات/مرشحات قد تظهر كبيضوي على خلفية البطاقة */
-.card, .info-card, .job-card, .location-card, .romat-card, .job1-card, .large-card, .about-card {
-  background-image: none !important;
-  filter: none !important;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important; /* ظل ناعم بلا توهج أزرق */
+/* تعطيل الشعارات/الزخارف العائمة التي قد تظهر قرب أعلى البطاقات */
+.floating-logo,
+.logo1, .logo2, .logo3 {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-/* 4) تأكيد عدم وجود حافة عليا مائلة أو تأثيرات موجية فوق البطاقات */
-.section-divider,
-.banner-header {
-  display: none !important; /* إن كانت تظهر فوق البطاقات في هذه الصفحة تحديداً */
+/* منع أي توهج داخلي/ظل قد يبدو كبيضوي داخل أعلى البطاقة */
+.card, .info-card, .job-card, .location-card, .about-card {
+  background-image: none !important;
+  filter: none !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important;
 }
