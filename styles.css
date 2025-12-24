@@ -3325,44 +3325,49 @@ header, .navbar {
 }
 
 
-/* =====================================================
-   KILL-RING PATCH: إزالة أي دائرة/شعار/بيضوي فوق البطاقات نهائياً
-   يستهدف عناصر: ::before/::after + صور top-logo + شعارات عائمة
+/* =================================================================
+   SECTION-SCOPED FIX: إزالة الدائرة/البيضوي فقط داخل أقسام
+   القوانين + من نحن + تواصل معنا (info-section / cards-container)
+   بدون التأثير على أي عناصر أخرى بالموقع
    تاريخ: 2025-12-24
-   ===================================================== */
+   ================================================================= */
 
-/* إلغاء جميع العناصر الشبهية أعلى البطاقات */
-.card::before, .card::after,
-.info-card::before, .info-card::after,
-.job-card::before, .job-card::after,
-.location-card::before, .location-card::after,
-.large-card::before, .large-card::after,
-.about-card::before, .about-card::after {
+/* استهداف البطاقات داخل أقسام المعلومات تحديداً */
+.info-section .card::before,
+.info-section .card::after,
+.info-section .info-card::before,
+.info-section .info-card::after,
+.cards-container .card::before,
+.cards-container .card::after,
+.cards-container .info-card::before,
+.cards-container .info-card::after {
   content: none !important;
   display: none !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-/* إخفاء أي صورة شعار موضوعة فوق البطاقات */
-.top-logo,
-.cards-container .top-logo,
+/* إلغاء أي عناصر دائرية/أيقونات داخلية قد تظهر كحلقة أعلى البطاقات في هذه الأقسام */
+.info-section .icon-wrapper,
+.info-section .card-icon,
+.info-section .icon-container,
+.cards-container .icon-wrapper,
+.cards-container .card-icon,
+.cards-container .icon-container,
 .info-section .top-logo,
-.card .top-logo {
+.cards-container .top-logo {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
-/* تعطيل الشعارات/الزخارف العائمة التي قد تظهر قرب أعلى البطاقات */
-.floating-logo,
-.logo1, .logo2, .logo3 {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* منع أي توهج داخلي/ظل قد يبدو كبيضوي داخل أعلى البطاقة */
-.card, .info-card, .job-card, .location-card, .about-card {
+/* ضمان أن خلفية البطاقات داخل هذه الأقسام لا تحمل تدرج/فلتر ينتج شكل بيضوي */
+.info-section .card,
+.info-section .info-card,
+.cards-container .card,
+.cards-container .info-card {
   background-image: none !important;
   filter: none !important;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important;
 }
