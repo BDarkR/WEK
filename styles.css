@@ -3325,60 +3325,43 @@ header, .navbar {
 }
 
 
-/* =============================================
-   وضع الشعار داخل الدوائر أعلى البطاقات + إخفاء الهالة
-   ============================================= */
+/* ==================================================
+   حلّ فوري: تغطية أي توهج/دوائر أعلى البطاقات بالكامل
+   بدون الحاجة لتعديل الـ HTML
+   ================================================== */
 
-/* نجعل البطاقة مرجِع تموضع ونلغي الهالة الزرقاء */
-.card,
-.info-card,
-.job-card,
-.location-card {
+/* اجعل محتوى البطاقة فوق الغطاء */
+.card, .info-card, .job-card, .location-card {
   position: relative !important;
-  overflow: visible !important; /* نحتاج مساحة لوضع الشعار فوق الحافة */
-  background-image: none !important;
 }
 
-/* غطاء دائري خفيف يغطي أي توهج قديم */
+/* غطاء علوي مسطّح يغطي 100px من أعلى البطاقة لإخفاء أي هالة */
 .card::before,
 .info-card::before,
 .job-card::before,
 .location-card::before {
-  content: "";
-  position: absolute;
-  top: -26px; /* يعلو الحافة العلوية قليلاً */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: #0f1f3f; /* نفس لون البطاقة تقريباً ليغطي التوهج */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-  z-index: 2;
+  content: "" !important;
+  position: absolute !important;
+  top: -10px !important;          /* يمتد قليلاً فوق الحافة */
+  left: 0 !important;
+  right: 0 !important;
+  height: 100px !important;       /* غطاء كافٍ للهالة البيضاوية */
+  background: #0f1f3f !important; /* نفس لون البطاقة */
+  border-top-left-radius: inherit !important;
+  border-top-right-radius: inherit !important;
+  box-shadow: none !important;
+  z-index: 2 !important;
 }
 
-/* الشعار داخل دائرة أصغر في المنتصف */
-.card::after,
-.info-card::after,
-.job-card::after,
-.location-card::after {
-  content: "";
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: url('img/logo.png') center/60% 60% no-repeat, #0b1f3a; /* 🔁 غيّر المسار إذا لزم */
-  border: 2px solid #2563eb;
-  box-shadow: 0 0 12px rgba(37,99,235,0.35);
-  z-index: 3;
+/* ارفع النصوص والأزرار فوق الغطاء */
+.card > *, .info-card > *, .job-card > *, .location-card > * {
+  position: relative !important;
+  z-index: 3 !important;
 }
 
-/* في حال أردت تعطيل الشعار لأي بطاقة محددة أضِف الكلاس التالي */
-.no-top-logo::before,
-.no-top-logo::after {
-  content: none !important;
+/* ألغِ أي عناصر دائرية قد تظهر فوق الغطاء */
+.card .icon-wrapper,
+.card .card-icon,
+.card .icon-container {
   display: none !important;
 }
