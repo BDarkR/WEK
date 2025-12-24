@@ -3388,3 +3388,14 @@ header, .navbar {
   background-image: none !important;
   filter: none !important;
 }
+
+
+/* === Override: Make footer match page background === */
+footer {
+  background-color: #0f172a !important; /* same as body background */
+  background-image: none !important;
+  border: 0;
+  box-shadow: none;
+}
+/* Optional: ensure divider above footer doesn't introduce different color */
+.section-divider { background: none !important; }
