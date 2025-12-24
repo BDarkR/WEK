@@ -3325,118 +3325,32 @@ header, .navbar {
 }
 
 
-/* ==================================================
-   حلّ فوري: تغطية أي توهج/دوائر أعلى البطاقات بالكامل
-   بدون الحاجة لتعديل الـ HTML
-   ================================================== */
+/* ==============================================
+   إزالة الشكل البيضاوي داخل الدائرة أعلى البطاقات
+   ============================================== */
 
-/* اجعل محتوى البطاقة فوق الغطاء */
-.card, .info-card, .job-card, .location-card {
-  position: relative !important;
-}
-
-/* غطاء علوي مسطّح يغطي 100px من أعلى البطاقة لإخفاء أي هالة */
-.card::before,
-.info-card::before,
-.job-card::before,
-.location-card::before {
-  content: "" !important;
-  position: absolute !important;
-  top: -10px !important;          /* يمتد قليلاً فوق الحافة */
-  left: 0 !important;
-  right: 0 !important;
-  height: 100px !important;       /* غطاء كافٍ للهالة البيضاوية */
-  background: #0f1f3f !important; /* نفس لون البطاقة */
-  border-top-left-radius: inherit !important;
-  border-top-right-radius: inherit !important;
-  box-shadow: none !important;
-  z-index: 2 !important;
-}
-
-/* ارفع النصوص والأزرار فوق الغطاء */
-.card > *, .info-card > *, .job-card > *, .location-card > * {
-  position: relative !important;
-  z-index: 3 !important;
-}
-
-/* ألغِ أي عناصر دائرية قد تظهر فوق الغطاء */
-.card .icon-wrapper,
-.card .card-icon,
-.card .icon-container {
-  display: none !important;
-}
-
-
-/* =========================================
-   شعار PNG داخل دائرة أعلى البطاقة (نهائي)
-   ========================================= */
-
-/* تأكد أن البطاقات مرجع تموضع */
-.card,
-.info-card,
-.job-card,
-.location-card,
-.about-card {
-  position: relative !important;
-  overflow: visible !important;
-}
-
-/* غطاء علوي خفيف يدفن أي هالة قديمة */
+/* ألغِ الغطاء الذي قد يصنع البيضاوي */
 .card::before,
 .info-card::before,
 .job-card::before,
 .location-card::before,
 .about-card::before {
-  content: "" !important;
-  position: absolute !important;
-  top: -26px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 76px !important;
-  height: 76px !important;
-  border-radius: 50% !important;
-  background: #0f1f3f !important;          /* لون قريب من لون البطاقة */
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35) !important;
-  z-index: 2 !important;
+  display: none !important;
+  content: none !important;
 }
 
-/* دائرة الشعار نفسها */
+/* أبقِ الدائرة الخارجية مع اللوجو فقط بدون أي خلفية/تدرّج داخلي */
 .card::after,
 .info-card::after,
 .job-card::after,
 .location-card::after,
 .about-card::after {
-  content: "" !important;
-  position: absolute !important;
-  top: -14px !important;                    /* ارفع/نزّل حسب رغبتك */
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 56px !important;
-  height: 56px !important;
-  border-radius: 50% !important;
-  background-color: #0b1f3a !important;     /* خلفية داخل الدائرة */
-  background-image: url("img/logo.png") !important; /* ✅ المسار صحيح */
+  background-color: transparent !important; /* إزالة الخلفية التي قد تبدو بيضاوية */
+  background-image: url('img/logo.png') !important; /* شعارك فقط */
   background-repeat: no-repeat !important;
   background-position: center !important;
-  background-size: 60% 60% !important;      /* حجم الشعار داخل الدائرة */
-  border: 2px solid #2563eb !important;
-  box-shadow: 0 0 12px rgba(37, 99, 235, 0.35) !important;
-  z-index: 3 !important;
+  background-size: 80% 80% !important; /* يكبّر الشعار قليلاً داخل الحلقة */
+  box-shadow: none !important;           /* لا توهج داخلي */
+  outline: none !important;
+  border: 2px solid #2563eb !important;  /* حلقة خارجية بسيطة */
 }
-
-/* كتم أي عناصر دائرية قديمة داخل البطاقات */
-.card .icon-wrapper,
-.card .card-icon,
-.card .icon-container {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* لو تريد تعطيل الشعار عن بطاقة معيّنة */
-.no-top-logo::before,
-.no-top-logo::after {
-  content: none !important;
-  display: none !important;
-}
-
