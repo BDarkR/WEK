@@ -3391,25 +3391,21 @@ header, .navbar {
 
 
 
-/* === Fix bottom purple: ensure footer overlays any floating graphics and matches page bg === */
+/* === Remove/Mask the thin strip at the top edge of the footer === */
 footer {
-  position: relative !important;
-  z-index: 2 !important;
-  background-color: #0f172a !important; /* page background */
-  background-image: none !important;
-  border: 0;
-  box-shadow: none;
+  border-top: 0 !important;
+  box-shadow: none !important;
 }
-/* Create a solid overlay inside the footer to mask any overlapping fixed elements */
-footer::before {
+/* Mask any 1px/2px line caused by adjacent sections or subpixel blending */
+footer::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: #0f172a; /* same as body */
-  z-index: -1; /* sits behind footer content but above background */
+  top: 0; left: 0; right: 0;
+  height: 3px; /* cover thin line */
+  background: #0f172a; /* same as page background */
 }
-/* Keep floating decorations behind footer */
-.planet-background, .floating-logo { z-index: 0 !important; }
-
-/* Remove any divider/stripe backgrounds right above the footer */
-.section-divider { background: none !important; }
+/* Ensure the section above footer has no bottom border or shadow */
+.section-divider, .info-section, .laws-grid-section, .about-section, .trade-system, .jobs, .locations {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
