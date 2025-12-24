@@ -675,7 +675,12 @@ img {
 }
 
 .circle {
-   display: none;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1); /* تأثير نصف شفاف */
+    position: absolute;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
 }
 
 .circle:nth-child(1) {
@@ -2584,14 +2589,7 @@ footer {
     100% { transform: rotate(360deg); }
   }
   .blue-star {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: radial-gradient(circle, #00ccff, #003344);
-    border-radius: 50%;
-    opacity: 0.2;
-    animation: blinkStar 4s infinite ease-in-out, floatStar 40s linear infinite;
-    pointer-events: none;
+   display: none;
   }
   
   /* كل نجمة بموقع مختلف */
