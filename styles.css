@@ -3325,32 +3325,53 @@ header, .navbar {
 }
 
 
-/* ==============================================
-   إزالة الشكل البيضاوي داخل الدائرة أعلى البطاقات
-   ============================================== */
+/* =====================================================
+   FINAL: إزالة أي شكل بيضوي/توّهج فوق البطاقات نهائياً
+   وإيقاف العناصر الزخرفية التي قد تظهر خلفها
+   تاريخ: 2025-12-24
+   ===================================================== */
 
-/* ألغِ الغطاء الذي قد يصنع البيضاوي */
+/* 1) إزالة أي عناصر شبهية فوق البطاقات (بيضوي/حلقة/توّهج) */
 .card::before,
+.card::after,
 .info-card::before,
+.info-card::after,
 .job-card::before,
+.job-card::after,
 .location-card::before,
-.about-card::before {
-  display: none !important;
+.location-card::after,
+.about-card::before,
+.about-card::after {
   content: none !important;
+  display: none !important;
 }
 
-/* أبقِ الدائرة الخارجية مع اللوجو فقط بدون أي خلفية/تدرّج داخلي */
-.card::after,
-.info-card::after,
-.job-card::after,
-.location-card::after,
-.about-card::after {
-  background-color: transparent !important; /* إزالة الخلفية التي قد تبدو بيضاوية */
-  background-image: url('img/logo.png') !important; /* شعارك فقط */
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: 80% 80% !important; /* يكبّر الشعار قليلاً داخل الحلقة */
-  box-shadow: none !important;           /* لا توهج داخلي */
-  outline: none !important;
-  border: 2px solid #2563eb !important;  /* حلقة خارجية بسيطة */
+/* 2) تعطيل العناصر الزخرفية التي قد ترسم دوائر/توهّج حول البطاقات */
+.icon-wrapper,
+.card-icon,
+.icon-container,
+.floating-logo,
+.planet,
+.blue-star,
+.banner-overlay,
+.animated-background {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
+
+/* 3) جعل خلفية البطاقات معتمة لمنع ظهور أي خلفية من خلفها */
+.card,
+.info-card,
+.job-card,
+.location-card,
+.about-card {
+  position: relative !important;
+  overflow: visible !important;
+  background-color: #0f1f3f !important;
+  background-image: none !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important; /* ظل متزن بلا توهج */
+}
+
+/* 4) لو أردت لاحقاً إظهار شعار داخل دائرة، احذف القواعد أعلاه وأعد إضافة دالة الشعار */
+
