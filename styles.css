@@ -77,8 +77,8 @@ nav {
 }
 
 .nav-links a.active {
-    color: #3b82f6; /* تغيير من #a855f7 إلى أزرق */
-    border-bottom: 2px solid #3b82f6; /* تغيير من #a855f7 إلى أزرق */
+    color: #3b82f6; /* هذا أزرق - تم التغيير */
+    border-bottom: 2px solid #3b82f6; /* هذا أزرق - تم التغيير */
     padding-bottom: 3px;
 }
 .nav-links a.activeKK{
