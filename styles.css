@@ -3325,22 +3325,60 @@ header, .navbar {
 }
 
 
-/* =============================
-   جعل بطاقات المحتوى معتمة لمنع ظهور الدوائر من الخلفية
-   ============================= */
+/* =============================================
+   وضع الشعار داخل الدوائر أعلى البطاقات + إخفاء الهالة
+   ============================================= */
+
+/* نجعل البطاقة مرجِع تموضع ونلغي الهالة الزرقاء */
 .card,
 .info-card,
 .job-card,
-.location-card,
-.about-card {
-  background-color: #0f1f3f !important; /* خلفية معتمة داكنة */
-  background-image: none !important;     /* إلغاء أي تدرج/صورة قد تصنع هالة */
-  filter: none !important;               /* إلغاء أي مرشحات قد تُظهر توهج */
+.location-card {
+  position: relative !important;
+  overflow: visible !important; /* نحتاج مساحة لوضع الشعار فوق الحافة */
+  background-image: none !important;
 }
 
-/* في حال كانت الدائرة من عناصر داخلية أعلى البطاقة */
-.card .card-icon,
-.card .icon-wrapper,
-.card .icon-container {
+/* غطاء دائري خفيف يغطي أي توهج قديم */
+.card::before,
+.info-card::before,
+.job-card::before,
+.location-card::before {
+  content: "";
+  position: absolute;
+  top: -26px; /* يعلو الحافة العلوية قليلاً */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #0f1f3f; /* نفس لون البطاقة تقريباً ليغطي التوهج */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  z-index: 2;
+}
+
+/* الشعار داخل دائرة أصغر في المنتصف */
+.card::after,
+.info-card::after,
+.job-card::after,
+.location-card::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: url('img/logo.png') center/60% 60% no-repeat, #0b1f3a; /* 🔁 غيّر المسار إذا لزم */
+  border: 2px solid #2563eb;
+  box-shadow: 0 0 12px rgba(37,99,235,0.35);
+  z-index: 3;
+}
+
+/* في حال أردت تعطيل الشعار لأي بطاقة محددة أضِف الكلاس التالي */
+.no-top-logo::before,
+.no-top-logo::after {
+  content: none !important;
   display: none !important;
 }
