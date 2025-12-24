@@ -3365,3 +3365,33 @@ header, .navbar {
 .card .icon-container {
   display: none !important;
 }
+
+/* شعار PNG داخل دائرة أعلى البطاقة */
+.card,
+.info-card,
+.job-card,
+.location-card {
+  position: relative;
+}
+
+.card::after,
+.info-card::after,
+.job-card::after,
+.location-card::after {
+  content: "";
+  position: absolute;
+  top: -28px; /* يرفع الدائرة فوق البطاقة */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0b1f3a; /* خلفية داخل الدائرة */
+  background-image: url("img/logo.png"); /* ← غيّر المسار إذا لزم */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 70%; /* حجم الشعار داخل الدائرة */
+  border: 2px solid #2563eb;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.35);
+  z-index: 3;
+}
