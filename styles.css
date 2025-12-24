@@ -3390,12 +3390,12 @@ header, .navbar {
 }
 
 
-/* === Override: Make footer match page background === */
-footer {
-  background-color: #0f172a !important; /* same as body background */
+
+/* === Strong override to purge any residual purple near footer === */
+footer::before, footer::after { background: none !important; }
+/* In case any nested element paints a band color at the footer edge */
+footer * {
   background-image: none !important;
-  border: 0;
-  box-shadow: none;
 }
-/* Optional: ensure divider above footer doesn't introduce different color */
-.section-divider { background: none !important; }
+/* If floating planets overlap the footer edge, hide them only when inside footer */
+footer .planet, footer .floating-logo { display: none !important; }
