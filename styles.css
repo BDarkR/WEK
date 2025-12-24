@@ -3325,45 +3325,69 @@ header, .navbar {
 }
 
 
-/* =================================================================
-   SECTION-SCOPED FIX: إزالة الدائرة/البيضوي فقط داخل أقسام
-   القوانين + من نحن + تواصل معنا (info-section / cards-container)
-   بدون التأثير على أي عناصر أخرى بالموقع
-   تاريخ: 2025-12-24
-   ================================================================= */
+/* =====================================================================
+   APPLY ON ORIGINAL SITE (targeted to index sections)
+   الهدف: إزالة أي شكل بيضوي وإضافة شعار PNG داخل دائرة نظيفة
+   النطاق: بطاقات الأقسام داخل .info-section و .cards-container على الصفحة الرئيسية
+   التاريخ: 2025-12-24
+   ===================================================================== */
 
-/* استهداف البطاقات داخل أقسام المعلومات تحديداً */
+/* 1) إزالة أي بيضوي/توّهج سابق عبر العناصر الشبهية داخل الأقسام المحددة */
 .info-section .card::before,
-.info-section .card::after,
 .info-section .info-card::before,
-.info-section .info-card::after,
 .cards-container .card::before,
-.cards-container .card::after,
-.cards-container .info-card::before,
-.cards-container .info-card::after {
+.cards-container .info-card::before {
   content: none !important;
   display: none !important;
   background: none !important;
-  background-image: none !important;
   box-shadow: none !important;
   border: none !important;
 }
 
-/* إلغاء أي عناصر دائرية/أيقونات داخلية قد تظهر كحلقة أعلى البطاقات في هذه الأقسام */
+/* 2) إضافة شعار داخل دائرة نظيفة فوق كل بطاقة في هذه الأقسام فقط */
+.info-section .card,
+.info-section .info-card,
+.cards-container .card,
+.cards-container .info-card {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.info-section .card::after,
+.info-section .info-card::after,
+.cards-container .card::after,
+.cards-container .info-card::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -28px !important;              /* يظهر فوق حافة البطاقة */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  background-color: transparent !important; /* لا خلفية داخلية */
+  background-image: url('img/logo.png') !important; /* شعارك */
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 80% 80% !important;       /* حجم الشعار داخل الدائرة */
+  border: 2px solid #2563eb !important;      /* حلقة خارجية رفيعة */
+  box-shadow: none !important;               /* لا توهج داخلي */
+  z-index: 3 !important;
+}
+
+/* 3) تعطيل أي عناصر داخلية قد تصنع هالة داخل هذه الأقسام فقط */
 .info-section .icon-wrapper,
 .info-section .card-icon,
 .info-section .icon-container,
 .cards-container .icon-wrapper,
 .cards-container .card-icon,
-.cards-container .icon-container,
-.info-section .top-logo,
-.cards-container .top-logo {
+.cards-container .icon-container {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
-/* ضمان أن خلفية البطاقات داخل هذه الأقسام لا تحمل تدرج/فلتر ينتج شكل بيضوي */
+/* 4) تأكيد أن خلفيات البطاقات داخل هذه الأقسام لا تملك تدرجات/فلاتر تسبب بيضوي */
 .info-section .card,
 .info-section .info-card,
 .cards-container .card,
