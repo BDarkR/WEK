@@ -77,8 +77,8 @@ nav {
 }
 
 .nav-links a.active {
-    color: #3b82f6; /* هذا أزرق - تم التغيير */
-    border-bottom: 2px solid #3b82f6; /* هذا أزرق - تم التغيير */
+    color: #2563eb; /* هذا أزرق - تم التغيير */
+    border-bottom: 2px solid #2563eb; /* هذا أزرق - تم التغيير */
     padding-bottom: 3px;
 }
 .nav-links a.activeKK{
@@ -87,7 +87,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
 }
 
 /* ====== القسم الرئيسي مع الفيديو ====== */
@@ -122,7 +122,7 @@ nav {
 
 .btn, .more-btn, .apply-button, .cta-button {
     display: inline-block;
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -134,7 +134,7 @@ nav {
 }
 
 .btn:hover, .more-btn:hover, .btn1:hover, .apply-button:hover, .cta-button:hover {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     transform: scale(1.05);
 }
 
@@ -145,7 +145,7 @@ nav {
     display: inline-block;
     padding: 12px 24px;
     color: white;
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
@@ -154,7 +154,7 @@ nav {
 }
 
 .cta-button:hover {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     transform: scale(1.05);
 }
 
@@ -260,7 +260,7 @@ html {
     transform: translateY(0);
 }
 .section-title i {
-    color: #3b82f6; /* تغيير من #FFA500 إلى أزرق */
+    color: #2563eb; /* تغيير من #FFA500 إلى أزرق */
     margin-left: 10px;
     font-size: 32px;
 }
@@ -283,7 +283,7 @@ html {
 .icon-wrapper {
     width: 120px;
     height: 60px;
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     border-radius: 60px 60px 0 0;
     display: flex;
     align-items: center;
@@ -303,7 +303,7 @@ html {
 .icon-wrapper {
     width: 120px;
     height: 60px;
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     border-radius: 60px 60px 0 0; /* نصف دائرة */
     display: flex;
     align-items: center;
@@ -315,7 +315,7 @@ html {
 .icon-wrapper {
     width: 60px;
     height: 60px;
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     border-radius: 50%; /* يجعلها دائرة كاملة */
     display: flex;
     align-items: center;
@@ -323,7 +323,7 @@ html {
     margin: auto;
     margin-bottom: 15px;
     position: relative;
-    box-shadow: 0px 4px 10px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    box-shadow: 0px 4px 10px rgba(37, 99, 235, 0.35); /* تغيير اللون */
 }
 .sectors {
     text-align: center;
@@ -362,14 +362,14 @@ html {
 
 .sector-card:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 10px #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    box-shadow: 0px 0px 10px #2563eb; /* تغيير من #2563eb إلى أزرق */
 }
 
 .sector-card img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 3px solid #3b82f6;
+    border: 3px solid #2563eb;
 }
 
 .sector-card p {
@@ -411,13 +411,13 @@ html {
     transition: 0.3s ease-in-out;
     opacity: 0;
     transform: translateY(50px);
-    box-shadow: 0px 5px 15px rgba(59, 130, 246, 0.3) /* تغيير اللون */
+    box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.25) /* تغيير اللون */
 
 }
 
 .store-section h2 {
     font-size: 28px;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
 }
 
 .store-section p {
@@ -448,7 +448,7 @@ footer {
 
 /* ====== زر معرفة المزيد ====== */
 .more-btn {
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     padding: 12px;
     border-radius: 8px;
@@ -457,7 +457,7 @@ footer {
 }
 
 .more-btn:hover {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     transform: scale(1.05);
 }
 
@@ -515,7 +515,7 @@ footer {
 /* تأثيرات عند تمرير الماوس */
 .job-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.25); /* تغيير اللون */
 }
 
 /* صورة القطاع */
@@ -524,7 +524,7 @@ footer {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 15px;
-    border: 3px solid #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    border: 3px solid #2563eb; /* تغيير من #2563eb إلى أزرق */
 }
 
 /* عنوان القطاع */
@@ -545,7 +545,7 @@ footer {
 
 /* زر معرفة المزيد */
 .more-btn {
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -559,7 +559,7 @@ footer {
 }
 
 .more-btn:hover {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     transform: scale(1.05);
 }
 
@@ -605,7 +605,7 @@ footer {
 
 .job-card h2 {
     font-size: 20px;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
 }
 
 .job-card p {
@@ -763,7 +763,7 @@ img {
 
 .panel ul li::before {
     content: "•"; /* نقطة جميلة */
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     font-size: 20px;
     margin-right: 10px;
 }
@@ -785,7 +785,7 @@ img {
     counter-increment: list-counter; /* إضافة الترقيم */
     content: counter(list-counter) ".";
     font-weight: bold;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     margin-right: 10px;
     font-size: 20px;
 }
@@ -796,7 +796,7 @@ img {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -805,7 +805,7 @@ img {
 }
 
 .panel a:hover {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     transform: scale(1.05);
 }
 /* تصميم بنر الفيديو */
@@ -968,7 +968,7 @@ img {
 
 .requirement-item {
     width: 80%;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, #2563eb, #172554);
     padding: 15px;
     text-align: center;
     border-radius: 12px;
@@ -1065,7 +1065,7 @@ img {
 .card-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #3b82f6, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(135deg, #2563eb, #172554); /* تغيير الألوان */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1100,7 +1100,7 @@ img {
     display: inline-block;
     padding: 12px 20px;
     color: white;
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
@@ -1110,14 +1110,14 @@ img {
 }
 
 .card .btn:hover {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     transform: scale(1.05);
 }
 
 /* تأثير عند التحويم */
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.25); /* تغيير اللون */
 }
 
 /* تحسين القسم العام */
@@ -1320,7 +1320,7 @@ img {
 }
 
 .apply-button {
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     padding: 15px 30px;
     font-size: 20px;
@@ -1330,7 +1330,7 @@ img {
 }
 
 .apply-button:hover {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
 }
 /* تحسين عرض النصوص والعناوين */
 .sector-info {
@@ -1393,7 +1393,7 @@ img {
 }
 
 .apply-button {
-    background: linear-gradient(45deg, #3b82f6, #1d4ed8); /* تغيير الألوان */
+    background: linear-gradient(45deg, #2563eb, #172554); /* تغيير الألوان */
     color: white;
     padding: 15px 35px;
     font-size: 20px;
@@ -1405,7 +1405,7 @@ img {
 }
 
 .apply-button:hover {
-    background: linear-gradient(45deg, #1d4ed8, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(45deg, #172554, #172554); /* تغيير الألوان */
     transform: scale(1.05);
 }
 
@@ -1414,18 +1414,18 @@ img {
 .icon-container {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* تغيير الألوان */
+    background: linear-gradient(135deg, #2563eb, #172554); /* تغيير الألوان */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 5px 15px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.25); /* تغيير اللون */
     transition: transform 0.3s ease-in-out;
 }
 
 /* تحسين الأزرار */
 .cta-button {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     padding: 12px 20px;
     color: white;
     border-radius: 8px;
@@ -1435,7 +1435,7 @@ img {
 }
 
 .cta-button:hover {
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     transform: scale(1.1);
 }
 
@@ -1576,7 +1576,7 @@ img {
 
 .accordion-header {
     padding: 15px;
-    background-color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background-color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -1584,7 +1584,7 @@ img {
 }
 
 .accordion-header:hover {
-    background-color: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background-color: #172554; /* تغيير من #172554 إلى أزرق داكن */
 }
 
 .accordion-content {
@@ -1635,7 +1635,7 @@ img {
 }
 
 .tab-button {
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
@@ -1646,7 +1646,7 @@ img {
 }
 
 .tab-button:hover, .tab-button.active {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
 }
 
 /* 🔹 إخفاء محتوى التبويبات */
@@ -1696,7 +1696,7 @@ img {
 }
 
 .tab-button {
-    background: linear-gradient(135deg, #3b82f6, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(135deg, #2563eb, #172554); /* تغيير الألوان */
     color: white;
     padding: 12px 24px;
     border-radius: 10px;
@@ -1708,7 +1708,7 @@ img {
 }
 
 .tab-button:hover, .tab-button.active {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(135deg, #172554, #172554); /* تغيير الألوان */
     transform: scale(1.05);
 }
 
@@ -1775,7 +1775,7 @@ img {
 }
 
 .tab-button {
-    background: linear-gradient(135deg, #3b82f6, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(135deg, #2563eb, #172554); /* تغيير الألوان */
     color: white;
     padding: 14px 28px;
     border-radius: 10px;
@@ -1787,7 +1787,7 @@ img {
 }
 
 .tab-button:hover, .tab-button.active {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(135deg, #172554, #172554); /* تغيير الألوان */
     transform: scale(1.08);
 }
 
@@ -1845,7 +1845,7 @@ img {
 }
 
 .tab-button {
-    background: linear-gradient(135deg, #3b82f6, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(135deg, #2563eb, #172554); /* تغيير الألوان */
     color: white;
     padding: 14px 28px;
     border-radius: 10px;
@@ -1857,7 +1857,7 @@ img {
 }
 
 .tab-button:hover, .tab-button.active {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af); /* تغيير الألوان */
+    background: linear-gradient(135deg, #172554, #172554); /* تغيير الألوان */
     transform: scale(1.08);
 }
 
@@ -1888,7 +1888,7 @@ img {
 }
 
 .location-card, .job-card {
-    background: #1e3a8a;
+    background: #1e293b;
     padding: 15px;
     border-radius: 8px;
     width: 250px;
@@ -1931,7 +1931,7 @@ h2 {
     padding: 10px;
 }
 .location-card {
-    background: #1e3a8a;
+    background: #1e293b;
     padding: 15px;
     border-radius: 8px;
     width: 250px;
@@ -1991,7 +1991,7 @@ footer {
 
 /* 🔹 تحسين تصميم البطاقات */
 .location-card, .job-card {
-    background: #1e3a8a;
+    background: #1e293b;
     padding: 15px;
     border-radius: 8px;
     width: 100%;
@@ -2066,7 +2066,7 @@ footer {
 .romat-card {
     background-color: #1e293b;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.25); /* تغيير اللون */
     padding: 25px 20px;
     width: 250px;
     text-align: center;
@@ -2082,7 +2082,7 @@ footer {
     width: 80px;
     margin-bottom: 15px;
     border-radius: 50%;
-    border: 2px solid #3b82f6; /* تغيير من #1d4ed8 إلى أزرق */
+    border: 2px solid #2563eb; /* تغيير من #172554 إلى أزرق */
     background-color: #fff;
 }
 
@@ -2101,7 +2101,7 @@ footer {
 
 .romat-card .btn {
     display: inline-block;
-    background-color: #3b82f6; /* تغيير من #a654ff إلى أزرق */
+    background-color: #2563eb; /* تغيير من #a654ff إلى أزرق */
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
@@ -2111,7 +2111,7 @@ footer {
 }
 
 .romat-card .btn:hover {
-    background-color: #1d4ed8; /* تغيير من #833de0 إلى أزرق داكن */
+    background-color: #172554; /* تغيير من #833de0 إلى أزرق داكن */
 }
   
   .header {
@@ -2161,7 +2161,7 @@ footer {
   .content-box h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #3b82f6; /* تغيير من #f0c040 إلى أزرق */
+    color: #2563eb; /* تغيير من #f0c040 إلى أزرق */
   }
   
   .side-nav {
@@ -2188,7 +2188,7 @@ footer {
   
   .side-nav li.active,
   .side-nav li:hover {
-    background: #3b82f6; /* تغيير من #f0c040 إلى أزرق */
+    background: #2563eb; /* تغيير من #f0c040 إلى أزرق */
   }
   .content-box {
     background: rgba(0, 0, 0, 0.8);
@@ -2210,8 +2210,8 @@ footer {
   .content-box h2 {
     font-size: 2.5rem;
     margin-bottom: 25px;
-    color: #3b82f6; /* تغيير من #f0c040 إلى أزرق */
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    color: #2563eb; /* تغيير من #f0c040 إلى أزرق */
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.25); /* تغيير اللون */
   }
 
   
@@ -2224,8 +2224,8 @@ footer {
   
   .header h1 {
     font-size: 2.8rem;
-    color: #3b82f6; /* تغيير من #ffcc66 إلى أزرق */
-    text-shadow: 0 0 12px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    color: #2563eb; /* تغيير من #ffcc66 إلى أزرق */
+    text-shadow: 0 0 12px rgba(37, 99, 235, 0.35); /* تغيير اللون */
   }
   
   .law-section {
@@ -2256,18 +2256,18 @@ footer {
   .content-box h2 {
     font-size: 2.3rem;
     margin-bottom: 25px;
-    color: #3b82f6; /* تغيير من #ffcc66 إلى أزرق */
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    color: #2563eb; /* تغيير من #ffcc66 إلى أزرق */
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.25); /* تغيير اللون */
   }
   
   .side-nav li {
     background: #fff;
-    border: 1px solid #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    border: 1px solid #2563eb; /* تغيير من #2563eb إلى أزرق */
   }
   
   .side-nav li.active,
   .side-nav li:hover {
-    background: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background: #2563eb; /* تغيير من #2563eb إلى أزرق */
   }
   .section-divider {
     height: 100px;
@@ -2297,13 +2297,13 @@ footer {
   .content-box h2 {
     font-size: 2.3rem;
     margin-bottom: 25px;
-    color: #3b82f6; /* تغيير من #ffcc66 إلى أزرق */
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    color: #2563eb; /* تغيير من #ffcc66 إلى أزرق */
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.25); /* تغيير اللون */
     text-align: center; /* ➤ اجعل العنوان في المنتصف */
   }
   .banner-header {
     width: 100%;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa); /* تغيير الألوان */
+    background: linear-gradient(90deg, #2563eb, #60a5fa); /* تغيير الألوان */
     padding: 20px 0;
     text-align: center;
     border-top-left-radius: 15px;
@@ -2344,8 +2344,8 @@ footer {
     padding: 12px 18px;
     margin: 8px auto;
     border-radius: 8px;
-    border: 1px solid #3b82f6; /* تغيير من #70ffb8 إلى أزرق */
-    color: #3b82f6; /* تغيير من #70ffb8 إلى أزرق */
+    border: 1px solid #2563eb; /* تغيير من #70ffb8 إلى أزرق */
+    color: #2563eb; /* تغيير من #70ffb8 إلى أزرق */
     font-weight: bold;
     max-width: 700px;
     transition: transform 0.3s ease;
@@ -2376,7 +2376,7 @@ footer {
 
 
 .checklist.green li {
-    color: #3b82f6; /* تغيير من #70ffb8 إلى أزرق */
+    color: #2563eb; /* تغيير من #70ffb8 إلى أزرق */
 }
 
 .checklist.mixed li {
@@ -2388,7 +2388,7 @@ footer {
 }
 
 .checklist .green {
-    color: #3b82f6; /* تغيير من #70ffb8 إلى أزرق */
+    color: #2563eb; /* تغيير من #70ffb8 إلى أزرق */
 }
 
 /* صور اللباس */
@@ -2413,7 +2413,7 @@ footer {
 
 /* زر التقديم */
 .btn.primary {
-    background-color: #3b82f6; /* تغيير من #a46bff إلى أزرق */
+    background-color: #2563eb; /* تغيير من #a46bff إلى أزرق */
     color: white;
     font-size: 20px;
     padding: 15px 30px;
@@ -2426,7 +2426,7 @@ footer {
 }
 
 .btn.primary:hover {
-    background-color: #1d4ed8; /* تغيير من #7f3dfb إلى أزرق داكن */
+    background-color: #172554; /* تغيير من #7f3dfb إلى أزرق داكن */
 }
 
 /* أنيميشن */
@@ -2452,7 +2452,7 @@ footer {
 
 .uniform-single-image img:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.25); /* تغيير اللون */
 }
 .jobs-grid {
     display: grid;
@@ -2470,7 +2470,7 @@ footer {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.35); /* تغيير اللون */
   }
   
   .job1-card:hover {
@@ -2481,8 +2481,8 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    border: 2px solid #3b82f6; /* تغيير من #a77fff إلى أزرق */
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    border: 2px solid #2563eb; /* تغيير من #a77fff إلى أزرق */
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.35); /* تغيير اللون */
   }
   
   .job1-card span {
@@ -2490,7 +2490,7 @@ footer {
     margin-top: 15px;
     font-weight: bold;
     color: white;
-    background-color: #1e40af; /* تغيير من #2d1462 إلى أزرق داكن */
+    background-color: #172554; /* تغيير من #2d1462 إلى أزرق داكن */
     padding: 8px 0;
     border-radius: 10px;
   }
@@ -2498,8 +2498,8 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 15px; /* زاوية ناعمة بدل من الشكل الدائري */
-    border: 2px solid #3b82f6; /* تغيير من #a77fff إلى أزرق */
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    border: 2px solid #2563eb; /* تغيير من #a77fff إلى أزرق */
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.35); /* تغيير اللون */
     object-fit: cover;
   }
   .planet-background {
@@ -2515,7 +2515,7 @@ footer {
   .planet {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #3b82f6, #121212); /* تغيير اللون */
+    background: radial-gradient(circle at 30% 30%, #2563eb, #121212); /* تغيير اللون */
     opacity: 0.1;
     animation: floatPlanet 60s linear infinite alternate;
   }
@@ -2645,7 +2645,7 @@ footer {
   }
   
   .side-nav ul li:hover {
-    background-color: #3b82f6; /* تغيير من #f5c542 إلى أزرق */
+    background-color: #2563eb; /* تغيير من #f5c542 إلى أزرق */
   }
   
   /* Tooltip style */
@@ -2707,7 +2707,7 @@ footer {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6); /* تغيير الألوان */
+    background: linear-gradient(135deg, #172554, #2563eb); /* تغيير الألوان */
     color: white;
     border: none;
     border-radius: 50%;
@@ -2716,7 +2716,7 @@ footer {
     display: none;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35); /* تغيير اللون */
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 9999;
 }
@@ -2732,10 +2732,10 @@ footer {
 
 
 .sector-section h2 {
-    color: #3b82f6; /* تغيير من #70ffb8 إلى أزرق */
+    color: #2563eb; /* تغيير من #70ffb8 إلى أزرق */
     font-size: 30px;
     margin-bottom: 15px;
-    border-bottom: 3px dashed #3b82f6; /* تغيير من #70ffb8 إلى أزرق */
+    border-bottom: 3px dashed #2563eb; /* تغيير من #70ffb8 إلى أزرق */
     display: inline-block;
     padding-bottom: 8px;
 }
@@ -2757,18 +2757,18 @@ footer {
     width: 100%;
     transition: transform 0.3s ease;
     position: relative;
-    border: 1px solid #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    border: 1px solid #2563eb; /* تغيير من #2563eb إلى أزرق */
 }
 
 .widget-box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25); /* تغيير اللون */
 }
 
 .widget-box h3 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     text-shadow: 0 0 6px rgba(59, 130, 246, 0.4); /* تغيير اللون */
 }
 
@@ -2779,7 +2779,7 @@ footer {
 }
 .widget-box h3 i {
     margin-left: 8px;
-    color: #3b82f6; /* تغيير من #7289da إلى أزرق */
+    color: #2563eb; /* تغيير من #7289da إلى أزرق */
     font-size: 22px;
 }
 .widget-decoration {
@@ -2800,10 +2800,10 @@ footer {
 
 .about-section h2 {
     font-size: 42px;
-    color: #3b82f6; /* تغيير من #ffcc00 إلى أزرق */
+    color: #2563eb; /* تغيير من #ffcc00 إلى أزرق */
     margin-bottom: 15px;
     font-weight: bold;
-    text-shadow: 0 0 8px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    text-shadow: 0 0 8px rgba(37, 99, 235, 0.35); /* تغيير اللون */
 }
 
 .about-section p {
@@ -2836,17 +2836,17 @@ footer {
 
 .about-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.25); /* تغيير اللون */
 }
 
 .about-card i {
-    background: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background: #172554; /* تغيير من #172554 إلى أزرق داكن */
     color: white;
     padding: 18px;
     font-size: 32px;
     border-radius: 50%;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* تغيير اللون */
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.35); /* تغيير اللون */
 }
 
 .about-card h3 {
@@ -2865,7 +2865,7 @@ footer {
 .about-card a {
     display: inline-block;
     padding: 12px 20px;
-    background: linear-gradient(to right, #3b82f6, #1d4ed8); /* تغيير الألوان */
+    background: linear-gradient(to right, #2563eb, #172554); /* تغيير الألوان */
     color: white;
     font-weight: bold;
     font-size: 16px;
@@ -2876,7 +2876,7 @@ footer {
 
 .about-card a:hover {
     transform: scale(1.05);
-    background: #1e40af; /* تغيير من #7e22ce إلى أزرق داكن جداً */
+    background: #172554; /* تغيير من #7e22ce إلى أزرق داكن جداً */
 }
 .hero-button {
     display: inline-block;
@@ -2884,7 +2884,7 @@ footer {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6); /* تغيير الألوان */
+    background: linear-gradient(135deg, #172554, #2563eb); /* تغيير الألوان */
     border: none;
     border-radius: 50px;
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.05);
@@ -2896,12 +2896,12 @@ footer {
 }
 .hero-button:hover {
     transform: scale(1.07);
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* تغيير الألوان */
+    background: linear-gradient(135deg, #2563eb, #172554); /* تغيير الألوان */
     box-shadow: 0 0 25px rgba(59, 130, 246, 0.8), inset 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
 .store-button {
-    background-color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background-color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: white;
     border: none;
     border-radius: 10px;
@@ -2918,7 +2918,7 @@ footer {
   
   /* زر الشرح - أصغر وحجمه ثابت */
   .store-button.secondary {
-    background-color: #1d4ed8; /* تغيير من #1d4ed8 إلى أزرق داكن */
+    background-color: #172554; /* تغيير من #172554 إلى أزرق داكن */
     font-size: 14px;
     padding: 8px 18px;
     margin-top: 5px;
@@ -2940,7 +2940,7 @@ footer {
   }
   
   .violation-table thead {
-    background-color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    background-color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     color: #000;
   }
   
@@ -2954,7 +2954,7 @@ footer {
   
   .category-title {
     font-size: 24px;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     text-align: center;
     margin-top: 40px;
   }
@@ -2979,7 +2979,7 @@ footer {
   
   .law-group h3 {
     font-size: 26px;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -3002,12 +3002,12 @@ footer {
   
   .law-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); /* تغيير اللون */
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25); /* تغيير اللون */
   }
   
   .law-card h4 {
     font-size: 18px;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     margin-bottom: 8px;
   }
   
@@ -3029,7 +3029,7 @@ footer {
   
   .category-title {
     font-size: 26px;
-    color: #3b82f6; /* تغيير من #3b82f6 إلى أزرق */
+    color: #2563eb; /* تغيير من #2563eb إلى أزرق */
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -3045,7 +3045,7 @@ footer {
   }
   
   .violation-table thead {
-    background-color: #3b82f6; /* تغيير من #d4af37 إلى أزرق */
+    background-color: #2563eb; /* تغيير من #d4af37 إلى أزرق */
   }
   
   .violation-table th {
