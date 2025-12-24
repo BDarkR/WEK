@@ -3326,52 +3326,27 @@ header, .navbar {
 
 
 /* =====================================================
-   FINAL: إزالة أي شكل بيضوي/توّهج فوق البطاقات نهائياً
-   وإيقاف العناصر الزخرفية التي قد تظهر خلفها
+   Scoped fix: إزالة الشكل البيضاوي فقط من بطاقات الأقسام
+   بدون التأثير على بقية العناصر/الخلفيات
    تاريخ: 2025-12-24
    ===================================================== */
 
-/* 1) إزالة أي عناصر شبهية فوق البطاقات (بيضوي/حلقة/توّهج) */
+/* إلغاء أي عناصر شبهية تُنشئ شكل بيضاوي فوق البطاقات */
 .card::before,
 .card::after,
 .info-card::before,
-.info-card::after,
-.job-card::before,
-.job-card::after,
-.location-card::before,
-.location-card::after,
-.about-card::before,
-.about-card::after {
+.info-card::after {
   content: none !important;
   display: none !important;
-}
-
-/* 2) تعطيل العناصر الزخرفية التي قد ترسم دوائر/توهّج حول البطاقات */
-.icon-wrapper,
-.card-icon,
-.icon-container,
-.floating-logo,
-.planet,
-.blue-star,
-.banner-overlay,
-.animated-background {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* 3) جعل خلفية البطاقات معتمة لمنع ظهور أي خلفية من خلفها */
-.card,
-.info-card,
-.job-card,
-.location-card,
-.about-card {
-  position: relative !important;
-  overflow: visible !important;
-  background-color: #0f1f3f !important;
+  background: none !important;
   background-image: none !important;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important; /* ظل متزن بلا توهج */
+  box-shadow: none !important;
+  border: none !important;
 }
 
-/* 4) لو أردت لاحقاً إظهار شعار داخل دائرة، احذف القواعد أعلاه وأعد إضافة دالة الشعار */
-
+/* ضمان أن البطاقات نفسها لا تحمل أي خلفية شعاعية/فلتر يسبب بيضوي في الأعلى */
+.card,
+.info-card {
+  background-image: none !important;
+  filter: none !important;
+}
