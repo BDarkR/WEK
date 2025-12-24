@@ -3391,11 +3391,25 @@ header, .navbar {
 
 
 
-/* === Strong override to purge any residual purple near footer === */
-footer::before, footer::after { background: none !important; }
-/* In case any nested element paints a band color at the footer edge */
-footer * {
+/* === Fix bottom purple: ensure footer overlays any floating graphics and matches page bg === */
+footer {
+  position: relative !important;
+  z-index: 2 !important;
+  background-color: #0f172a !important; /* page background */
   background-image: none !important;
+  border: 0;
+  box-shadow: none;
 }
-/* If floating planets overlap the footer edge, hide them only when inside footer */
-footer .planet, footer .floating-logo { display: none !important; }
+/* Create a solid overlay inside the footer to mask any overlapping fixed elements */
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0f172a; /* same as body */
+  z-index: -1; /* sits behind footer content but above background */
+}
+/* Keep floating decorations behind footer */
+.planet-background, .floating-logo { z-index: 0 !important; }
+
+/* Remove any divider/stripe backgrounds right above the footer */
+.section-divider { background: none !important; }
