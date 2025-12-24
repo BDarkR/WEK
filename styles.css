@@ -3391,21 +3391,25 @@ header, .navbar {
 
 
 
-/* === Remove/Mask the thin strip at the top edge of the footer === */
+/* === FINAL fix: cover any remaining top strip above the footer === */
 footer {
-  border-top: 0 !important;
-  box-shadow: none !important;
+  position: relative !important;
+  z-index: 10 !important;
+  margin-top: 0 !important; /* prevent gaps creating a line */
+  isolation: isolate; /* create new stacking context for ::before overlay */
 }
-/* Mask any 1px/2px line caused by adjacent sections or subpixel blending */
-footer::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px; /* cover thin line */
-  background: #0f172a; /* same as page background */
+/* Extend a solid flap 6px upward to cover any subpixel seam from the section above */
+footer::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -6px !important; /* extend above footer */
+  left: 0; right: 0;
+  height: 6px !important; /* cover thin strip fully */
+  background: #0f172a !important; /* same as page bg */
+  pointer-events: none;
 }
-/* Ensure the section above footer has no bottom border or shadow */
+/* Make sure the section right before footer doesn't draw a 1px border/shadow */
+footer, footer * { border-top: 0 !important; box-shadow: none !important; }
 .section-divider, .info-section, .laws-grid-section, .about-section, .trade-system, .jobs, .locations {
-  border-bottom: 0 !important;
-  box-shadow: none !important;
+  border-bottom: 0 !important; box-shadow: none !important; margin-bottom: 0 !important;
 }
