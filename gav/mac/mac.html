@@ -108,7 +108,13 @@
                 <li>  يكون عمر المتقدم 15 فما فوق</li>
             </ul>
         </div>
-
+        
+<div class="sector-section">
+    <h2>قوانين القطاع</h2>
+    <ul class="checklist green" id="rules-list">
+        <li>جاري تحميل القوانين...</li>
+    </ul>
+</div>
         <div class="sector-section">
             <h2>الملاحظات</h2>
             <ul class="checklist red">
@@ -129,17 +135,43 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <script>
-
-    // إظهار الزر عند التمرير
+<script>
 window.onscroll = function () {
-const btn = document.getElementById("scrollTopBtn");
-btn.style.display = window.scrollY > 300 ? "flex" : "none";
+  const btn = document.getElementById("scrollTopBtn");
+  btn.style.display = window.scrollY > 300 ? "flex" : "none";
 };
 
-// الرجوع للأعلى بسلاسة
 document.getElementById("scrollTopBtn").onclick = () => {
-window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+<script>
+const SHEET_URL = "https://opensheet.elk.sh/1KI_0RPGI4RYFBek-QFP9qFyUaumWshah_HzT91yxQcg/tEST1";
+
+
+const sectorSections = {
+  "قوانين القطاع كراج الميكانيك": "sector-laws",
+  "دليل القطاع كراج الميكانيك": "sector-guide"
 };
 
-  </script>
+fetch(SHEET_URL)
+  .then(res => res.json())
+  .then(data => {
+    Object.entries(sectorSections).forEach(([group, elementId]) => {
+      const ul = document.getElementById(elementId);
+      if (!ul) return;
+
+      const filtered = data.filter(row => row.group === group);
+
+      ul.innerHTML = filtered.map(row => `
+        <li>${row.rule_description}</li>
+      `).join('');
+    });
+  })
+  .catch(() => {
+    document.getElementById("sector-laws").innerHTML = "<li>تعذر تحميل القوانين</li>";
+    document.getElementById("sector-guide").innerHTML = "<li>تعذر تحميل الدليل</li>";
+  });
+</script>
+
