@@ -111,6 +111,15 @@
         </div>
 
         <div class="sector-section">
+    <h2>قوانين القطاع</h2>
+    <ul class="checklist green" id="sector-laws"></ul>
+</div>
+
+<div class="sector-section">
+    <h2>دليل القطاع</h2>
+    <ul class="checklist green" id="sector-guide"></ul>
+</div>
+        <div class="sector-section">
             <h2>الملاحظات</h2>
             <ul class="checklist red">
                  <li> الحضور للشرح النظري والتدريب الميداني <span class="red">إلزامي</span></li>
@@ -131,17 +140,42 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <script>
-
-    // إظهار الزر عند التمرير
+<script>
 window.onscroll = function () {
-const btn = document.getElementById("scrollTopBtn");
-btn.style.display = window.scrollY > 300 ? "flex" : "none";
+  const btn = document.getElementById("scrollTopBtn");
+  btn.style.display = window.scrollY > 300 ? "flex" : "none";
 };
 
-// الرجوع للأعلى بسلاسة
 document.getElementById("scrollTopBtn").onclick = () => {
-window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+<script>
+const SHEET_URL = "https://opensheet.elk.sh/YOUR_SHEET_ID/SHEET_NAME";
+
+const sectorSections = {
+  "قوانين القطاع الهلال الاحمر": "sector-laws",
+  "دليل القطاع الهلال الاحمر": "sector-guide"
 };
 
-  </script>
+fetch(SHEET_URL)
+  .then(res => res.json())
+  .then(data => {
+    Object.entries(sectorSections).forEach(([group, elementId]) => {
+      const ul = document.getElementById(elementId);
+      if (!ul) return;
+
+      const filtered = data.filter(row => row.group === group);
+
+      ul.innerHTML = filtered.map(row => `
+        <li>${row.rule_description}</li>
+      `).join('');
+    });
+  })
+  .catch(() => {
+    document.getElementById("sector-laws").innerHTML = "<li>تعذر تحميل القوانين</li>";
+    document.getElementById("sector-guide").innerHTML = "<li>تعذر تحميل الدليل</li>";
+  });
+</script>
+
