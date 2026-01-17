@@ -411,7 +411,7 @@ html {
     transition: 0.3s ease-in-out;
     opacity: 0;
     transform: translateY(50px);
-    box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.25) /* تغيير اللون */
+    box-shadow: 0px 5px 15px rgba(20, 184, 166, 0.25) /* تغيير اللون */
 
 }
 
@@ -515,7 +515,7 @@ footer {
 /* تأثيرات عند تمرير الماوس */
 .job-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0px 0px 20px rgba(20, 184, 166, 0.25); /* تغيير اللون */
 }
 
 /* صورة القطاع */
@@ -1117,7 +1117,7 @@ img {
 /* تأثير عند التحويم */
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0px 0px 20px rgba(20, 184, 166, 0.25); /* تغيير اللون */
 }
 
 /* تحسين القسم العام */
@@ -1419,7 +1419,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0px 5px 15px rgba(20, 184, 166, 0.25); /* تغيير اللون */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -2066,7 +2066,7 @@ footer {
 .romat-card {
     background-color: #1e293b;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.25); /* تغيير اللون */
     padding: 25px 20px;
     width: 250px;
     text-align: center;
@@ -2075,7 +2075,7 @@ footer {
 
 .romat-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); /* تغيير اللون */
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.6); /* تغيير اللون */
 }
 
 .romat-card img {
@@ -2196,7 +2196,7 @@ footer {
     border-radius: 20px;
     max-width: 900px;
     text-align: right;
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.2); /* تغيير اللون */
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.2); /* تغيير اللون */
     font-size: 20px;
     line-height: 2.2;
     color: #f5f5f5;
@@ -2211,7 +2211,7 @@ footer {
     font-size: 2.5rem;
     margin-bottom: 25px;
     color: #14b8a6; /* تغيير من #f0c040 إلى أزرق */
-    text-shadow: 0 0 10px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.25); /* تغيير اللون */
   }
 
   
@@ -2242,7 +2242,7 @@ footer {
     border-radius: 25px;
     max-width: 900px;
     text-align: right;
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); /* تغيير اللون */
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.2); /* تغيير اللون */
     font-size: 20px;
     line-height: 2.2;
     color: #f5f5f5;
@@ -2257,7 +2257,7 @@ footer {
     font-size: 2.3rem;
     margin-bottom: 25px;
     color: #14b8a6; /* تغيير من #ffcc66 إلى أزرق */
-    text-shadow: 0 0 10px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.25); /* تغيير اللون */
   }
   
   .side-nav li {
@@ -2298,7 +2298,7 @@ footer {
     font-size: 2.3rem;
     margin-bottom: 25px;
     color: #14b8a6; /* تغيير من #ffcc66 إلى أزرق */
-    text-shadow: 0 0 10px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.25); /* تغيير اللون */
     text-align: center; /* ➤ اجعل العنوان في المنتصف */
   }
   .banner-header {
@@ -2371,7 +2371,7 @@ footer {
 
 .checklist.green li:hover {
     transform: scale(1.02);
-    background: rgba(59, 130, 246, 0.2); /* تغيير اللون */
+    background: rgba(20, 184, 166, 0.2); /* تغيير اللون */
 }
 
 
@@ -2447,12 +2447,12 @@ footer {
     border-radius: 15px;
     border: 2px solid #2dd4bf; /* تغيير من #c49bff إلى أزرق فاتح */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); /* تغيير اللون */
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.2); /* تغيير اللون */
 }
 
 .uniform-single-image img:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 25px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.25); /* تغيير اللون */
 }
 .jobs-grid {
     display: grid;
@@ -2755,7 +2755,7 @@ footer {
 
 .widget-box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0 12px 30px rgba(20, 184, 166, 0.25); /* تغيير اللون */
 }
 
 .widget-box h3 {
@@ -2829,7 +2829,7 @@ footer {
 
 .about-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0 15px 30px rgba(20, 184, 166, 0.25); /* تغيير اللون */
 }
 
 .about-card i {
@@ -2880,7 +2880,7 @@ footer {
     background: linear-gradient(135deg, #0f766e, #14b8a6); /* تغيير الألوان */
     border: none;
     border-radius: 50px;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.05);
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -2990,12 +2990,12 @@ footer {
     padding: 20px;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2); /* تغيير اللون */
+    box-shadow: 0 2px 8px rgba(20, 184, 166, 0.2); /* تغيير اللون */
   }
   
   .law-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25); /* تغيير اللون */
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.25); /* تغيير اللون */
   }
   
   .law-card h4 {
